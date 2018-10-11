@@ -1,0 +1,32 @@
+<!--pages/personalCenter/personalCenter.wxml-->
+<view class='headBox'>
+  <image class='back' src='/images/back.png' bindtap='backPage'></image>
+  <view class='title'>个人中心</view>
+</view>
+<view class='mainBox'>
+  <view class='avatarBox'>
+    <image class='avatarUrl' src='{{avatarUrl}}'></image>
+  </view>
+  <view class='nickName'>{{nickName}}</view>
+  <view class='itemBox'>
+    <view class='item' bindtap='goRecord'>
+      <view class='icon putForward'></view>
+      <view class='text'>红包提现</view>
+    </view>
+    <view class='item' bindtap='goCollection'>
+      <view class='icon collection'></view>
+      <view class='text'>我的收藏</view>
+    </view>
+    <button class='itemContact' open-type="contact">
+      <view class='icon customer'></view>
+      <view class='text customerText'>联系客服</view>
+    </button>
+  </view>
+  <view class='btnBox'>
+    <button class='share' open-type='share'></button>
+    <navigator target="miniProgram" open-type="navigate" app-id="wx78a1f9e3ac67acee" path="pages/index/index" extra-data="" version="release" class='moreFun'>
+      <!-- <view class='moreFun'></view> -->
+    </navigator>
+  </view>
+  <view class='customer'></view>
+</view>

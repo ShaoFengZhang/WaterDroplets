@@ -1,0 +1,15 @@
+/**app.wxss**/
+page {
+  background-image: url(https://tp.datikeji.com/constellation/15391575223543/sNaDNO9y3H8SuPPEvm8pz7vSZMV6RzmOYBTNMqWD.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.back {
+  width: 44rpx;
+  height: 44rpx;
+  margin-top: 62rpx;
+  margin-left: 22rpx;
+  display: inline-block;
+  vertical-align:bottom;
+}
+@import "/template/template.wxss";

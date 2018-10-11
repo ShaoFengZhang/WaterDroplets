@@ -1,0 +1,24 @@
+<!--template/template.wxml-->
+<template name="tabBar">
+  <view class="tabBar">
+    <block wx:for="{{tabBar}}" wx:for-item="item" wx:key="tabBar" wx:for-index='idx'>
+      <view class="tabBar-item" wx:if='{{idx!=1}}'>
+        <navigator open-type="redirect" url="{{item.pagePath}}" hover-class='none'>
+          <view class='icon-box'>
+            <image class="icon" src='{{item.iconPath}}'></image>
+          </view>
+          <view class="{{item.current== 1 ? 'tabBartext' :''}}">{{item.text}}</view>
+        </navigator>
+      </view>
+      <view class="tabBar-item" wx:if='{{idx==1}}'>
+        <navigator open-type="redirect" url="{{item.pagePath}}" hover-class='none'>
+          <view class='icon-box'>
+            <image class="avatarUrl icon" src='{{item.iconPath}}'></image>
+          </view> 
+          <view class="{{item.current== 1 ? 'tabBartext' :''}}">{{item.text}}</view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+</template>
+

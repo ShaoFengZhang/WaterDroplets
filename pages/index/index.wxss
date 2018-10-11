@@ -1,0 +1,96 @@
+/**index.wxss**/
+
+/* page {
+  background-image: url(https://tp.datikeji.com/constellation/15391559122644/ATWiXSh2mBH9FTTrwDbpi5KwIPdHS8H9YvtnFM8L.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+.headBox {
+  width: 750rpx;
+  height: 88rpx;
+}
+
+.title {
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: 300;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  margin-top: 60rpx;
+}
+
+.mainBox {
+  width: 662rpx;
+  height: 1144rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 10rpx;
+}
+
+.itemBox {
+  width: 130rpx;
+  height: auto;
+  display: inline-block;
+  margin-left: 90rpx;
+  margin-top: 30rpx;
+  text-align: center;
+}
+
+.img {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.itemBox:nth-child(3n+1) {
+  margin-left: 50rpx;
+}
+
+.name {
+  color: #080016;
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-top: -5rpx;
+}
+
+.date {
+  font-size: 20rpx;
+  font-weight: 500;
+  color: #080016;
+  margin-top:5rpx;
+}
+
+.confirm {
+  width: 584rpx;
+  height: 88rpx;
+  background-image: url(https://tp.datikeji.com/constellation/15375881525410/DdDyIoLchcdiRXrnfRsYslBzkYB9cLJfY7SoKaWP.png);
+  background-size: cover;
+  margin: 0 auto;
+  margin-top: 38rpx;
+  border: none;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+  
+}
+.confirm:after{
+  border: none;
+  border-radius: 0;
+}
+.tips{
+  margin-left: 95rpx;
+  font-size: 20rpx;
+  margin-top: 10rpx;
+  line-height: 36rpx;
+}
+.reminder{
+  display: inline-block;
+  width: 95rpx;
+  text-align: right
+}
+.tipsContent{
+  width: 375rpx;
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+}

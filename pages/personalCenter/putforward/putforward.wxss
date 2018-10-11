@@ -1,0 +1,189 @@
+/* pages/personalCenter/putforward/putforward.wxss */
+/* pages/personalCenter/personalCenter.wxss */
+
+/* page {
+  background-image: url(https://tp.datikeji.com/constellation/15391559122644/ATWiXSh2mBH9FTTrwDbpi5KwIPdHS8H9YvtnFM8L.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+.headBox{
+  width: 750rpx;
+  height: 88rpx;
+}
+
+.title{
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: 300;
+  margin: 0 auto;
+  display: inline-block;
+  margin-left: 238rpx;
+
+}
+.mainBox{
+  width: 662rpx;
+  height: 1082rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 10rpx;
+  margin-top:106rpx;
+}
+.avatarBox{
+  width: 218rpx;
+  height: 218rpx;
+  position: absolute;
+  top: 130rpx;
+  left:266rpx;
+  background-image: url(https://tp.datikeji.com/constellation/15380440815728/7q8wD2zfcXj4z0q5QP52RVM36YqUgMMnDvIGo54x.png);
+  background-size: cover;
+}
+.avatarUrl{
+  width: 194rpx;
+  height: 194rpx;
+  position: absolute;
+  left: 12rpx;
+  top: 8rpx;
+  border-radius: 50%;
+}
+.changeText{
+  width: 500rpx;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 158rpx;
+  color: #333;
+  font-size:28rpx;
+  font-weight:500;
+}
+.change{
+  font-size:38rpx;
+  font-weight:500; 
+}
+.putBtn{
+  background-image: url(https://tp.datikeji.com/constellation/15373488856019/3yeVGmjsvQkSzkjiJDrKdEAegdFWlwhum0OXHkNx.png);
+  background-size: cover;
+  width: 588rpx;
+  height: 90rpx;
+  margin: 0 auto;
+  margin-top: 58rpx
+}
+.recordBox{
+  width: 588rpx;
+  margin: 0 auto;
+}
+.btnBox{
+  color: #333;
+  font-size: 30rpx;
+  text-align: center;
+  margin-top: 50rpx;
+  border-bottom: 1rpx dotted #4C4C4C;
+}
+.btnRecord{
+  width: 50%;
+  display: inline-block;
+  margin-bottom: 20rpx;  
+}
+.recordList{
+  width: 512rpx;
+  height:524rpx;
+  background-color: rgb(247, 247, 247);
+  margin: 0 auto;
+}
+.item{
+  width: 482rpx;
+  height: 124rpx;
+  margin: 0 auto;
+}
+.itemTitle{
+  color: #080016;
+  font-size: 24rpx;
+  margin-top: 28rpx;
+  width: 50%;
+  display: inline-block;
+}
+.itemMoney{
+  display: inline-block;
+  color: #FC5366;
+  font-size: 28rpx;
+  text-align: right;
+  width: 50%;
+}
+.itemDes{
+  color: #4C4C4C;
+  font-size: 20rpx;
+  margin-top: 15rpx;
+  display: inline-block;
+  width: 50%;
+}
+.itemTime{
+  color: #C4C4C4;
+  font-size: 20rpx;
+  margin-top: 15rpx;
+  display: inline-block;
+  text-align: right;
+  width: 50%;
+}
+.rule{
+  color: #996AEC;
+  width: 20%;
+  margin: 0 auto;
+  text-align: cenetr;  
+  margin-top: 35rpx;
+  font-size: 24rpx;
+}
+.active{
+  color: #996AEC;
+}
+.default{
+  width: 512rpx;
+  height: 524rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(https://tp.datikeji.com/constellation/15391630585100/Xdd9tysAhqo8ClIXMxo0jNamU2VODdC0SYSnXbLu.png);
+  background-size: cover;
+}
+
+.shadow{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.popup{
+  width: 590rpx;
+  height: 478rpx;
+  background-color: #fff;
+  position: absolute;
+  left: 80rpx;
+  top: 378rpx;
+  border-radius: 24rpx;
+}
+.helpPopupRule{
+  background-color: #8C58E8;
+  color: #fff;
+  font-size: 46rpx;
+  line-height: 150rpx;
+  text-align: center;
+  width: 100%;
+  height: 150rpx;
+  border-top-left-radius: 24rpx;
+  border-top-right-radius: 24rpx;
+}
+.rules{
+  background-image: url(https://tp.datikeji.com/constellation/15391518703209/AGVYNfGQtIg6IDsDZKBvfP72r6H5xNZH7jqK3aBv.png);
+  background-size: cover;
+  width: 590rpx;
+  height: 240rpx;
+}
+.know{
+  border-top: 1rpx solid #E2E2E2;
+  width: 100%;
+  height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+  color: #4C4C4C;
+  font-size: 30rpx;
+}

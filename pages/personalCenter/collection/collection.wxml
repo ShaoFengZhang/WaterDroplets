@@ -1,0 +1,27 @@
+<!--pages/personalCenter/collection/Collection.wxml-->
+<view class='headBox'>
+  <image class='back' src='/images/back.png' bindtap='backPage'></image>
+  <view class='title'>我的收藏</view>
+</view>
+<view class='mainBox'>
+<view class='blank'></view>
+  <block wx:for="{{collectedList}}" wx:key="index">
+    <view class="item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:if="{{collectedList.length > 0}}">
+      <view class='timeBox'>
+        <view class='year'>{{item.year}}年</view>
+        <view class='month'>{{item.month}}月{{item.day}}日</view>
+      </view>
+      <view class='imgBox'>
+        <image class='circle' src='{{circleUrl}}'></image>
+        <view class='vertical' src='/images/vertical.png' wx:if="{{index != collectedList.length -1}}"></view>
+      </view>
+      <view class='event' data-id="{{item.content_id}}" data-year="{{item.year}}" bindtap='goEventDes'>
+        <view class='eventDes'>{{item.content}}</view>
+        <!-- <view class="del" catchtap="del" data-index="{{index}}">删除</view> -->
+      </view>
+    </view>
+    <view class='default' wx:if="{{collectedList.length == 0}}">
+      <view class='goCollection' bindtap='goCollection'></view>
+    </view>
+  </block>
+</view>

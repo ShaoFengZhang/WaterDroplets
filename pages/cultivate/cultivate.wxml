@@ -1,0 +1,121 @@
+<!--pages/cultivate/cultivate.wxml-->
+<view class='timeBox'>
+  <text class='date timeText'>{{dateStamp}}</text>
+  <text class='week timeText'>{{weekStamp}}</text>
+</view>
+<view class='mainBox'>
+  <text class='help' bindtap='showHelp'>帮助>></text>
+  <view class='sign-box' bindtap='punchClock'>
+    <view class='sign'></view>
+    <view class='sign-animate'></view>
+    <view class='sign-animate sign-animate2'></view>
+    <block wx:if="{{is_clock == 0}}">
+      <text class='canClock'>打卡</text>
+    </block>
+    <block wx:if="{{is_clock == 1}}">
+      <view class='clock_day'>{{clock_day}}</view>
+      <text class='text'>成功打卡</text>
+    </block>
+  </view>
+
+  <!-- <view class='sign days3'></view> -->
+  <view class='kettle' bindtap='waterAnimation'></view>
+  <block wx:if="{{watering}}">
+    <image class='wateringGif' src="https://tp.datikeji.com/constellation/15381269526836/QxGJ4zbxeOTXjuDU38o9WQReZ4pMnZpvtOWqeQzG.gif"></image>
+  </block>
+  <image class='plant' src='{{plantImg}}'></image>
+</view>
+<!-- 周记录 -->
+<view class='recordBox flip {{frameClass1}}'>
+  <view class='recordMain'>
+    <view class='recordText'>周记录
+      <text class='tip'>(05:00后开始打卡)</text>
+    </view>
+    <view class='grow' bindtap='rotateFn'>成长值>></view>
+    <view class='weekList'>
+      <view class='item' wx:for="{{weekList}}" wx:key="index">
+        <view class='line {{clock_day >= index+1 ? "deepLine" : ""}}' wx:if="{{index < weekList.length -1}}"></view>
+        <view class='circle {{clock_day >= index+1 ? "deepCircle" : ""}}'>{{item}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 生长进度 -->
+<view class='recordBox flip {{frameClass2}}'>
+  <view class='recordMain'>
+    <view class='recordText'>生长进度
+      <text class='tip'>({{grouth}}/{{upgrade}})</text>
+    </view>
+    <view class='grow' bindtap='rotateFn'>周记录>></view>
+    <view class='weekList'>
+      <view class='itemV' wx:for="{{growList}}" wx:key="index">
+        <view class='circleV {{grouth >= item.value ? "deepCircle" : ""}}'>{{item.title}}</view>
+        <view class='lineV {{grouth >= item.value ? "deepLine" : ""}}' wx:if="{{index < growList.length -1}}"></view>
+        <view class='value'>{{item.value}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='growFaster' bindtap='goMoreFast'></view>
+<!-- 遮罩层 -->
+<block>
+  <view class='shadow' wx:if="{{showPopup == 1}}">
+    <!-- <image class='shareBtnImg' src='{{}}'></image> -->
+    <view class='popup'>
+      <view class='girlImg'></view>
+      <view class='forkImg' bindtap='close'></view>
+      <view class='titleText'>打卡成功，获得奖励</view>
+      <view class='goldText'>￥
+        <text class='gold'>{{updateList.num}}</text>
+      </view>
+      <view class='contentTip'>
+        <view class='content1'>可到个人中心申请提现</view>
+        <view class='content2'>奖金由
+          <navigator target="miniProgram" open-type="navigate" app-id="{{updateList.appid}}" path="pages/index/index" extra-data="" version="release" class='sponsorName'>『{{updateList.content}}』</navigator>
+          赞助</view>
+      </view>
+      <view class='sponsor'>
+        <image class='sponsorImg' src='{{updateList.pic}}'></image>
+      </view>
+      <view class='btnBox'>
+        <view class='goWithDraw' bindtap='goWithDraw'></view>
+        <button class='share' open-type='share'></button>
+      </view>
+    </view>
+  </view>
+
+  <view class='shadow' wx:if="{{showPopup == 2}}">
+    <view class='plantLevel'>
+      <image class='plantPopupImg' src='{{plantPopupImg}}'></image>
+      <view class='headBox'>
+        <view class='headText'>植物升级</view>
+        <view class='headText2'>获得红包一个</view>
+      </view>
+      <view class='mainPlantPopup'>
+        <view class='mainPacket'>
+          <view class='mainPacketCount'>{{num}}
+            <text class='yuan'>元</text>
+          </view>
+        </view>
+        <view class='btnplantPopup' >
+          <view class='goWithDraw2' bindtap='goWithDraw'></view>
+          <button class='share2' open-type='share'></button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 帮助 -->
+  <view class='shadow' wx:if="{{showPopup == 3}}">
+    <view class='helpPopup'>
+      <view class='helpHead'>
+        <image class='helpPopupImg' src='{{plantPopupImg}}'></image>
+        <view class='helpPopupRule'>帮助</view>
+      </view>
+      <view class='rules'></view>
+      <view class='know' bindtap='close'>我知道了</view>
+    </view>
+  </view>
+</block>
+<import src="../../template/template.wxml" />
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />

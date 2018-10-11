@@ -1,0 +1,250 @@
+/* pages/constellation/constellation.wxss */
+
+/* page {
+  background-image: url(https://tp.datikeji.com/constellation/15391559122644/ATWiXSh2mBH9FTTrwDbpi5KwIPdHS8H9YvtnFM8L.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+.timeText {
+  color: #f2eaff;
+  font-size: 24rpx;
+  display: inline-block;
+  margin-top: 70rpx;
+  margin-left: 44rpx;
+}
+
+.week {
+  margin-left: 20rpx;
+}
+
+.swiper-box {
+  height: 984rpx;
+  margin-top: 30rpx;
+}
+
+.mainBox {
+  width: 662rpx;
+  height: 780rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 34rpx;
+  position: relative;
+  /* display: flex;
+  flex-direction: row; */
+}
+
+.leftBox {
+  width: 200rpx;
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+  display: inline-block;
+}
+
+.constellationImg {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.name {
+  color: #080016;
+  font-size: 50rpx;
+  text-align: center;
+  font-weight: bold;
+  /* margin-top: 19rpx; */
+}
+
+.interval {
+  color: #080016;
+  font-size: 22rpx;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.fortune {
+  display: block;
+  margin: 0 auto;
+  width: 200rpx;
+  height: 54rpx;
+  margin-top: 12rpx;
+}
+
+.today {
+  width: 94rpx;
+  height: 44rpx;
+  background: rgba(196, 196, 196, 1);
+  border-radius: 22rpx;
+  display: inline-block;
+  margin-right: 10rpx;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 44rpx;
+}
+
+.tomorrow {
+  width: 94rpx;
+  height: 44rpx;
+  background: rgba(196, 196, 196, 1);
+  border-radius: 22rpx;
+  display: inline-block;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 44rpx;
+}
+.active{
+  background: linear-gradient(0deg, rgba(153, 106, 236, 1), rgba(140, 87, 232, 1));
+  border-radius: 22rpx;
+  box-shadow: 3rpx 3rpx 6rpx 0rpx rgba(113, 42, 237, 0.4);
+}
+.rightBox {
+  width: 338rpx;
+  margin-left: 40rpx;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.dailySentence {
+  width: 100%;
+  line-height: 82rpx;
+  font-size: 40rpx;
+  color: #080016;
+  margin-top: 40rpx;
+  border-bottom: 1rpx solid #e2e2e2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item {
+  color: #080016;
+  font-size: 28rpx;
+  margin-top: 16rpx;
+}
+
+.item:first-child {
+  margin-top: 30rpx;
+}
+
+.start {
+  width: 30rpx;
+  height: 30rpx;
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 1rpx;
+  margin-right: 6rpx;
+}
+
+.start:first-child {
+  margin-left: 7rpx;
+}
+
+.color {
+  margin-left: 7rpx;
+  color: #4c4c4c;
+  font-size: 24rpx;
+}
+
+.blank {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  width: 578rpx;
+  height: 6rpx;
+  border-top: 4rpx solid #e2e2e2;
+  border-bottom: 1rpx solid #e2e2e2;
+}
+
+.desFortune {
+  color: #333;
+  font-size: 24rpx;
+  text-indent: 48rpx;
+  width: 576rpx;
+  max-height: 200rpx;
+  line-height: 36rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+
+.shake {
+  width: 170rpx;
+  height: 64rpx;
+  background-image: url(https://tp.datikeji.com/constellation/15382237485350/8uad0CBJKLfBF5C6E8sVPXZoGJv1scXWeLWPLUhU.png);
+  background-size: cover;
+  border: none;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  bottom: 22rpx;
+  right: 35rpx;
+}
+
+.shake::after {
+  border: none;
+  border-radius: 0;
+}
+
+.personalCenter {
+  width: 662rpx;
+  height: 174rpx;
+  margin-top: 30rpx;
+  margin-left: 44rpx;
+  background-color: #fff;
+  background-image: url(https://tp.datikeji.com/constellation/15380432088909/ARMNP21957eJEHjNznCno7BcFBeIb1oDrwlA3sQl.png);
+  background-size: cover;
+  border-radius: 10rpx;
+}
+
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.popupBox {
+  width: 662rpx;
+  height: 985rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  position: absolute;
+  left: 44rpx;
+  top: 142rpx;
+  border-radius: 10rpx;
+}
+
+.itemBox {
+  width: 130rpx;
+  height: auto;
+  display: inline-block;
+  margin-left: 90rpx;
+  margin-top: 30rpx;
+  text-align: center;
+}
+
+.itemImg {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.itemBox:nth-child(3n+1) {
+  margin-left: 50rpx;
+}
+
+.itemName {
+  color: #080016;
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-top: -5rpx;
+}
+
+.itemDate {
+  font-size: 20rpx;
+  font-weight: 500;
+  color: #080016;
+  margin-top: 5rpx;
+}

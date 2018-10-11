@@ -1,0 +1,74 @@
+<!--pages/constellation/constellation.wxml-->
+<view class='timeBox'>
+  <text class='date timeText'>{{dateStamp}}</text>
+  <text class='week timeText'>{{weekStamp}}</text>
+</view>
+
+<view class='mainBox'>
+  <view class='leftBox'>
+    <image class='constellationImg' src="{{fortuneList.icon}}" bindtap='showPopup'></image>
+    <view class='name'>{{fortuneList.name}}</view>
+    <view class='interval'>{{fortuneList.time_interval}}</view>
+    <!-- <image class='fortune' src='{{fortuneBtn}}' bindtap='tomorrowFortune'></image> -->
+    <view class='fortune'>
+      <view class='today {{toDayBool == 0 ? "active" : ""}}' bindtap='getFortune'>今天</view>
+      <view class='tomorrow {{toDayBool == 1 ? "active" : ""}}' bindtap='getFortune'>明天</view>
+    </view>
+  </view>
+  <view class='rightBox'>
+    <view class='dailySentence'>{{nickName}}充满元气的一天</view>
+    <view class='exponentialStar'>
+      <view class='work item'>工作指数：
+        <block wx:for="{{fortuneList.work}}" wx:key="index">
+          <image class='start' src='../../images/workStartLight.png'></image>
+        </block>
+        <block wx:for="{{5 - fortuneList.work}}" wx:key="index">
+          <image class='start' src='../../images/workStartDark.png'></image>
+        </block>
+      </view>
+      <view class='heath item'>健康指数：
+        <block wx:for="{{fortuneList.health}}" wx:key="index">
+          <image class='start' src='../../images/heathLight.png'></image>
+        </block>
+        <block wx:for="{{5 - fortuneList.health}}" wx:key="index">
+          <image class='start' src='../../images/heathDark.png'></image>
+        </block>
+      </view>
+      <view class='love item'>爱情指数：
+        <block wx:for="{{fortuneList.love}}" wx:key="index">
+          <image class='start' src='../../images/loveLight.png'></image>
+        </block>
+        <block wx:for="{{5 - fortuneList.love}}" wx:key="index">
+          <image class='start' src='../../images/loveDark.png'></image>
+        </block>
+      </view>
+      <view class='financial item'>财运指数：
+        <block wx:for="{{fortuneList.money}}" wx:key="index">
+          <image class='start' src='../../images/financialLight.png'></image>
+        </block>
+        <block wx:for="{{5 - fortuneList.money}}" wx:key="index">
+          <image class='start' src='../../images/financialDark.png'></image>
+        </block>
+      </view>
+      <view class='luckyColor item'>幸运颜色：
+        <text class='color'>{{fortuneList.color}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='blank'></view>
+  <scroll-view class='desFortune' scroll-y>{{fortuneList.summary}}</scroll-view>
+  <button class='shake' open-type='share'></button>
+</view>
+<view class='personalCenter' bindtap='goPersonalCenter'></view>
+<import src="../../template/template.wxml" />
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+<!-- 弹窗 -->
+<view class='shadow' wx:if="{{showPopup == 1}}">
+  <view class='popupBox'>
+    <view class='itemBox' wx:for="{{imgList}}" wx:key="index" data-id="{{item.id}}" data-name="{{item.name}}" bindtap='choiceImg'>
+      <image class='itemImg' src='{{item.id == selectId ? item.select_url : item.url}}'></image>
+      <view class='itemName'>{{item.name}}</view>
+      <view class='itemDate'>{{item.date}}</view>
+    </view>
+  </view>
+</view>

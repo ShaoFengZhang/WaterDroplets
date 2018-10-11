@@ -1,0 +1,27 @@
+/* components/tabBar/tabBar.wxss */
+.tabBarNav{
+  width: 662rpx;
+  height: 98rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 86rpx;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.menu-item{
+  flex-grow:1;
+  text-align:center;
+}
+.tabIcon{
+  width: 44rpx;
+  height: 44rpx;
+  vertical-align: middle;
+}
+.tabText{
+  display: block;
+  font-size: 20rpx;
+  color: #C9CBCD;
+  margin-top:8rpx;
+}

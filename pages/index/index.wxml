@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class='headBox'>
+  <view class='title'>选择你的生日或星座</view>
+</view>
+<view class='mainBox'>
+  <view class='itemBox' wx:for="{{imgList}}" wx:key="index" data-id="{{item.id}}" data-name="{{item.name}}" bindtap='choiceImg'>
+    <image class='img' src='{{item.id == selectId ? item.select_url : item.url}}'></image>
+    <view class='name'>{{item.name}}</view>
+    <view class='date'>{{item.date}}</view>
+  </view>
+  <!-- <form bindsubmit="submitInfo" report-submit='true'> -->
+    <button class='confirm' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo"></button>
+  <!-- </form> -->
+  <view class='tips'>
+    <text class='reminder'>温馨提示:</text>
+    <text class='tipsContent'>点击同意后可以获得专属的体验，假如你选择错误，稍后可以在首页随时修改。</text>
+  </view>
+</view>

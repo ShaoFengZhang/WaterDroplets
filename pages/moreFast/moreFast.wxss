@@ -1,0 +1,105 @@
+/* pages/moreFast/moreFast.wxss */
+
+/* page {
+  background-image: url(https://tp.datikeji.com/constellation/15391559122644/ATWiXSh2mBH9FTTrwDbpi5KwIPdHS8H9YvtnFM8L.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+.headBox {
+  width: 750rpx;
+  height: 88rpx;
+}
+
+.title {
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: 300;
+  margin: 0 auto;
+  display: inline-block;
+  margin-left: 238rpx;
+  vertical-align:bottom;
+}
+
+.mainBox {
+  width: 662rpx;
+  height: 1104rpx;
+  background-image: url(https://tp.datikeji.com/constellation/15382799528972/PD9Qgeu0o9G8whmt80JZWPGEt6xaQ7QhHKSSOig4.png);
+  background-size: cover;
+  margin: 0 auto;
+  margin-top: 85rpx;
+  position: relative;
+}
+
+.growthRule {
+  font-size: 22rpx;
+  color: #e3d4fe;
+  width: 154rpx;
+  height: 23rpx;
+  position: absolute;
+  right: 60rpx;
+  top: 102rpx;
+}
+
+.qrcode {
+  width: 170rpx;
+  height: 170rpx;
+  position: absolute;
+  right: 76rpx;
+  top: 408rpx;
+  border-radius: 50%;
+}
+
+.plantImg {
+  width: 304rpx;
+  height: 328rpx;
+  position: absolute;
+  right: 174rpx;
+  bottom: 234rpx;
+}
+
+.btnBox {
+  width: 512rpx;
+  height: 98rpx;
+  position: absolute;
+  left: 75rpx;
+  bottom: 104rpx;
+}
+.savePic{
+  width: 248rpx;
+  height: 98rpx;
+  background-image: url(https://tp.datikeji.com/constellation/15382814269984/zyAkHZrgKo18i6IQ5WyiP7SF977RFw3RoVGGgMLU.png);
+  background-size: cover;
+  display: inline-block;
+  margin-right: 16rpx;
+}
+.share{
+  width: 248rpx;
+  height: 98rpx;
+  background-image: url(https://tp.datikeji.com/constellation/15382814946015/KTPSc1LrlYFgPfX855sLUVeSbVu2UsMxKJ3gC1I6.png);
+  background-size: cover;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 0;
+}
+.share:after{
+  border: none;
+  border-radius: 0;
+}
+.howShare{
+  color: #E3D4FE;
+  font-size: 22rpx;
+  width: 272rpx;
+  height: 23rpx;
+  position: absolute;
+  left: 195rpx;
+  bottom: 24rpx
+}
+.myCanvas{
+  width: 574rpx;
+  height: 746rpx;
+  position: absolute;
+  left: -9999rpx;
+  bottom: -500rpx;
+}

@@ -1,0 +1,10 @@
+<!--components/tabBar/tabBar.wxml-->
+<view class="tabBarNav">
+  <block wx:for="{{tabBar.list}}" wx:key="pagePath">
+    <navigator url="{{item.pagePath}}" open-type="redirect" class="menu-item" style="{{item.active? 'color: '+(item.selectedColor? item.selectedColor : tabBar.selectedColor) : ''}}">
+      <image class='tabIcon' src="{{item.selectedIconPath}}" wx:if="{{item.active}}"></image>
+      <image class='tabIcon' src="{{item.iconPath}}" wx:if="{{!item.active}}"></image>
+      <text class='tabText'>{{item.text}}</text>
+    </navigator>
+  </block>
+</view>

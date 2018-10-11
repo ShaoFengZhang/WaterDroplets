@@ -1,0 +1,112 @@
+/* pages/history/history.wxss */
+/* page {
+  background-image: url(https://tp.datikeji.com/constellation/15391559122644/ATWiXSh2mBH9FTTrwDbpi5KwIPdHS8H9YvtnFM8L.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+.textBox{
+  width: 90%;
+  display: inline-block;
+  vertical-align: top;  
+}
+.timeText {
+  color: #f2eaff;
+  font-size: 24rpx;
+  display: inline-block;
+  margin-top: 70rpx;
+  margin-left: 44rpx;
+}
+.eventBox{
+  width: 662rpx;
+  height: 1132rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+}
+.eventTitle{
+  width: 90%;
+  color: #080016;
+  font-size: 42rpx;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 36rpx;
+  font-weight: bold;
+  padding-top:58rpx;
+}
+.eventDetails{
+  width: 545rpx;
+  max-height: 810rpx;
+  margin: 0 auto;
+  margin-top: 45rpx;
+  font-size: 24rpx;
+  color: #333;
+  line-height: 44rpx;
+  text-align:justify;
+  text-justify:inter-ideograph;
+}
+.eventPic{
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  margin-top: 30rpx;
+}
+.btnBox{
+  background-image: url(https://tp.datikeji.com/constellation/15369111594665/egzLjkCymVtFZsG3FsORZaZDHVUryNYMDRBu5aBT.png);
+  background-size: cover;
+  width: 662rpx;
+  height: 108rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.icon{
+  width: 46rpx;
+  height: 40rpx;
+  margin-left: 140rpx;
+  margin-top: 40rpx;
+  background-image: url(https://tp.datikeji.com/constellation/15371710665218/AkT6NaU86K68ebLzp1MtKBm97jvYavL2YTLsFB5g.png);
+  background-size: cover;
+  display: inline-block;
+}
+.collection{
+  display: inline-block;
+  vertical-align: top;
+  line-height: 120rpx;
+  margin-left: 10rpx;
+  font-size: 20rpx;
+  color: #080016;
+}
+.share{
+  width: 46rpx;
+  height: 40rpx;
+  margin-left: 180rpx;
+  margin-top: 40rpx;
+  display: inline-block;
+  vertical-align: top;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0;
+  border: none;
+  position: relative;
+}
+.shareImg{
+  width: 46rpx;
+  height: 40rpx;
+  background-image: url(https://tp.datikeji.com/constellation/15371710997470/aAQYStLaYRcXavDBLhj8vUeYgEZ8lNCg80uj6vll.png);
+  background-size: 100%;
+  position: absolute;
+  left: 0;
+  top: 0
+}
+.share::after{
+  border-radius: 0;
+  border: none
+}
+.friend{
+  display: inline-block;
+  vertical-align: top;
+  line-height: 120rpx;
+  font-size: 20rpx;
+  color: #080016
+}

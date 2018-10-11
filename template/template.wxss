@@ -1,0 +1,58 @@
+/* template/template.wxss */
+.icon-box{
+    width:44rpx;
+  height: 44rpx;
+  position: relative;
+  display: inline-block
+}
+.icon{
+  width:44rpx;
+  height: 44rpx;
+}
+.icon.avatarUrl{
+  border-radius: 50%;
+  width:120rpx;
+  height:120rpx;
+  position: absolute;
+  top:-80rpx;
+  left:-38rpx;
+  box-sizing: border-box;
+  border: 4rpx solid #fff;
+}
+.tabBar{
+  width:662rpx;
+  position: fixed;
+  bottom:20rpx;
+  left: 44rpx;
+  padding:10rpx;
+  margin-left:-4rpx;
+  background:#F7F7FA;
+  font-size:20rpx;
+  color:#060119;
+  border-radius: 10rpx;
+}
+
+ .tabBar-item{
+  float:left;
+  width:33.3%;
+  text-align: center;
+  position: relative;
+}
+
+/*当前字体颜色*/
+.tabBartext{
+  color:#8C57E8;
+}
+
+
+.timeText {
+  color: #f2eaff;
+  font-size: 24rpx;
+  display: inline-block;
+  margin-top: 70rpx;
+  margin-left: 44rpx;
+}
+
+.week {
+  margin-left: 20rpx;
+}

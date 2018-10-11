@@ -1,0 +1,25 @@
+<!--pages/history/history.wxml-->
+<image class='back' src='/images/back.png' bindtap='backPage'></image>
+<view class='textBox'>
+  <text class='date timeText'>{{yearStamp}}</text>
+  <text class='week timeText'>{{dateStamp}}</text>
+</view>
+<view class='eventBox'>
+  <view class='eventTitle'>{{eventItem.title}}</view>
+  <scroll-view class='eventDetails' scroll-y>
+    {{eventItem.content}}
+    <block wx:if="{{eventItem.pic.length > 0}}">
+      <image class='eventPic' mode='aspectFit' src='{{eventItem.pic}}'></image>
+    </block>
+  </scroll-view>
+  <view class='btnBox'>
+    <view bindtap='handleCollection' style='display:inline-block'>
+      <view class='icon' style='background-image:url({{collected == 0 ? "https://tp.datikeji.com/constellation/15372622064110/fRWf1WAXIcvNU0ShpaseSCpRXZtc0GMXrfwq6luk.png":"https://tp.datikeji.com/constellation/15371710665218/AkT6NaU86K68ebLzp1MtKBm97jvYavL2YTLsFB5g.png"}})'></view>
+      <text class='collection'>{{collected == 0 ? "收藏":"已收藏"}}</text>
+    </view>
+    <button class='share' open-type='share'>
+      <view class='shareImg'></view>
+    </button>
+    <text class='friend'>好友</text>
+  </view>
+</view>

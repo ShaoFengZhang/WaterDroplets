@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/constellation/constellation",
+    "components/tabBar/tabBar",
+    "pages/cultivate/cultivate",
+    "pages/briefHistory/historyInToday/historyInToday",
+    "pages/briefHistory/briefHistory/briefHistory",
+    "pages/personalCenter/personalCenter",
+    "pages/personalCenter/putforward/putforward",
+    "pages/personalCenter/collection/collection",
+    "pages/moreFast/moreFast",
+    "pages/shareInto/shareInto"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#130237",
+    "navigationBarTitleText": "水滴运势",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
+  },
+  "plugins": {
+    "calendar": {
+      "version": "1.1.3",
+      "provider": "wx92c68dae5a8bb046"
+    }
+  }
+}

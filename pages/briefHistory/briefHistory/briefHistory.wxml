@@ -1,0 +1,36 @@
+<!--pages/briefHistory/briefHistory/briefHistory.wxml-->
+<!-- 简史 -->
+<view>
+  <text class='date timeText'>{{dateStamp}}</text>
+  <text class='week timeText'>{{weekStamp}}</text>
+</view>
+<view class='historyBox'>
+  <view class='title'>历史上的今天</view>
+  <view class='selfSelect' bindtap='dateSelect'></view>
+  <scroll-view class='todayInHistory' scroll-y>
+    <block wx:for="{{todayHistoryArr}}" wx:key="index">
+      <view class='itemSelect' data-id="{{item._id}}" data-year="{{item.year}}" bindtap='historyDetails'>
+        <view class='leftItem'></view>
+        <view class='rightItem'>
+          <view class='year'>{{item.year}}年</view>
+          <view class='content'>{{item.title}}</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <block wx:if="{{showCalendar == 1}}">
+    <view class='shadow'>
+      <view class='calendarBox'>
+        <view class="demo4">
+          <calendar weeks-type="cn" cell-size="30" next="true" prev="true" calendar-style="demo4-calendar" header-style="demo4-header" board-style="demo4-board" days-color="{{demo4_days_style}}" binddayClick="dayClick" />
+          <view class='btnBox'>
+            <view class='today' bindtap='getTodayHistory'></view>
+            <view class='confirm' bindtap='getTodayHistory'></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<import src="../../../template/template.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>

@@ -1,0 +1,397 @@
+/* pages/shareInto/shareInto.wxss */
+/* pages/cultivate/cultivate.wxss */
+
+/* page {
+  background-image: url(https://tp.datikeji.com/constellation/15391559122644/ATWiXSh2mBH9FTTrwDbpi5KwIPdHS8H9YvtnFM8L.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+.timeText {
+  color: #f2eaff;
+  font-size: 24rpx;
+  display: inline-block;
+  margin-top: 70rpx;
+  margin-left: 44rpx;
+}
+
+.week {
+  margin-left: 20rpx;
+}
+
+.mainBox {
+  width: 662rpx;
+  height: 834rpx;
+  background-image: url(https://tp.datikeji.com/constellation/15379434678162/ZYfO0Bu0veEhVShL2pjr9Eaqmyht93yvGzIM7WQ8.png);
+  background-size: cover;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  position: relative;
+}
+
+.help {
+  width: 90rpx;
+  height: 24rpx;
+  position: absolute;
+  right: 24rpx;
+  top: 30rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  color: rgba(101, 57, 0, 1);
+  text-shadow: 2 rgba(255, 255, 255, 1);
+}
+
+.sign {
+  width: 192rpx;
+  height: 192rpx;
+  border-radius: 50%;
+  /* background-image: url(https://tp.datikeji.com/constellation/15379443142035/m4HKzFifzwiJsO0iKmEu2fxJLIIO6G5fhEPPdCso.png);
+  background-size: cover; */
+  background-color: rgb(254, 189, 54);
+  margin: 0 auto;
+  position: absolute;
+  top: 80rpx;
+  left: 235rpx;
+}
+
+.text {
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  left: 46rpx;
+  bottom: 40rpx;
+  z-index: 99;
+}
+
+.plant {
+  width: 304rpx;
+  height: 330rpx;
+  display: block;
+  position: absolute;
+  left: 184rpx;
+  bottom: 108rpx;
+}
+
+.kettle {
+  background-image: url(https://tp.datikeji.com/constellation/15379648003174/GYp4SOzUzZRESo9DGNkNeu7E6aEerF9vAkQKz7jR.png);
+  background-size: cover;
+  width: 108rpx;
+  height: 96rpx;
+  position: absolute;
+  right: 44rpx;
+  bottom: 54rpx;
+}
+
+.wateringGif {
+  background-image: url(https://tp.datikeji.com/constellation/15381269526836/QxGJ4zbxeOTXjuDU38o9WQReZ4pMnZpvtOWqeQzG.gif);
+  background-size: cover;
+  width: 426rpx;
+  height: 446rpx;
+  position: absolute;
+  left: 102rpx;
+  top: 258rpx;
+  z-index: 99;
+}
+
+.recordBox {
+  width: 662rpx;
+  height: 326rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  /* margin-top: -10rpx; */
+  border-radius: 10rpx;
+  box-shadow: 0rpx 4rpx 10rpx 0rpx rgba(19, 2, 54, 0.49);
+  z-index: 99
+}
+
+.recordMain {
+  width: 582rpx;
+  height: 116rpx;
+  margin: 0 auto;
+  /* margin-top: 16rpx; */
+}
+
+.recordText {
+  font-size: 24rpx;
+  color: #080016;
+  display: inline-block;
+}
+
+.tip {
+  text-align: right;
+  color: #4c4c4c;
+  font-size: 22rpx;
+  vertical-align: bottom;
+}
+
+.grow {
+  color: #996aec;
+  font-size: 22rpx;
+  /* display: inline-block; */
+  margin-top: 16rpx;
+  float: right;
+  right: 0;
+}
+
+.weekList {
+  width: 100%;
+  height: 58rpx;
+  border-top: 1rpx dotted #e9e9e9;
+  margin-top: 15rpx;
+}
+
+.item {
+  width: 86rpx;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.item:last-child {
+  width: 58rpx;
+  height: 58rpx;
+  margin-top: 10rpx;
+}
+
+.itemV {
+  width: 106rpx;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.itemV:last-child {
+  width: 48rpx;
+  height: 48rpx;
+  margin-top: 2rpx;
+}
+
+.line {
+  width: 28rpx;
+  height: 2rpx;
+  background-color: #c4c4c4;
+  display: inline-block;
+  position: absolute;
+  left: 58rpx;
+  top: 28rpx;
+}
+
+.circle {
+  width: 58rpx;
+  height: 58rpx;
+  border-radius: 50%;
+  font-size: 20rpx;
+  color: #c4c4c4;
+  background-color: #fff;
+  border: 2rpx solid #c4c4c4;
+  line-height: 58rpx;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+
+.circleV {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  font-size: 24rpx;
+  color: #c4c4c4;
+  background-color: #fff;
+  border: 2rpx solid #c4c4c4;
+  line-height: 48rpx;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  left: 0rpx;
+  top: 0;
+  z-index: 99;
+}
+
+.circleV:last-child {
+  position: absolute;
+  top: -1rpx;
+}
+
+.lineV {
+  width: 58rpx;
+  height: 2rpx;
+  background-color: #c4c4c4;
+  display: inline-block;
+  position: absolute;
+  left: 52rpx;
+  top: 28rpx;
+}
+
+.value {
+  font-size: 20rpx;
+  color: #4c4c4c;
+  width: 48rpx;
+  text-align: center;
+  margin-top: 57rpx;
+}
+
+.value:last-child {
+  margin-top: 64rpx;
+}
+
+.findOthers {
+  width: 190rpx;
+  height: 64rpx;
+  background-image: url(https://tp.datikeji.com/constellation/15382907006857/TPQ1itppmyvX2KN9yKXGCyUUzgdVI4PGkyTosjSB.png);
+  background-size: cover;
+  position: absolute;
+  right: 44rpx;
+  bottom: 705rpx;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0;
+  border: none
+}
+.findOthers:after{
+  border-radius: 0;
+  border: none
+}
+.backHome{
+  width: 190rpx;
+  height: 64rpx;
+  background-image: url(https://tp.datikeji.com/constellation/15382908297081/ucaZnyQ1hCSQXqK2axyEv3bS8V4SzAdfgKbnI6AU.png);
+  background-size: cover;
+  position: absolute;
+  left: 44rpx;
+  bottom: 705rpx;
+}
+
+.deepCircle {
+  background: rgba(153, 106, 236, 1);
+  border: 2rpx solid rgba(207, 183, 250, 1);
+  color: #f2eaff;
+}
+
+.deepLine {
+  background-color: #cfb7fa;
+}
+
+.mySelf{
+  width: 590rpx;
+  height: 108rpx;
+  background-image: url(https://tp.datikeji.com/constellation/15382916673435/Xq0IG4xFp4uXuFu5cXSIFPUROC7mfMNrOus1cr5k.png);
+  background-size: cover;
+  margin: 0 auto;
+  margin-top: 65rpx;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0;
+  border: none;
+}
+.mySelf:after{
+  border-radius: 0;
+  border: none;
+}
+/* 遮罩层样式 */
+
+.shadow {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.popup {
+  width: 590rpx;
+  height: 720rpx;
+  background-color: #fff;
+  border-radius: 24rpx;
+  position: absolute;
+  left: 80rpx;
+  top: 308rpx;
+}
+
+.titleText {
+  width: 100%;
+  height: 50rpx;
+  text-align: center;
+  color: #080016;
+  font-size: 46rpx;
+  margin-top: 110rpx;
+}
+
+.headBox{
+  width: 330rpx;
+  height: 166rpx;
+  position: absolute;
+  top: 65rpx;
+  right: 86rpx;
+  color: #fff;
+}
+.headText{
+  font-size: 70rpx;
+  font-weight:500;
+  letter-spacing: 12rpx
+}
+.headText2{
+  text-align: center;
+  font-size: 40rpx;
+  font-weight:500;
+  margin-top:22rpx;
+}
+
+.helpPopup{
+  width:590rpx;
+  height: 928rpx;
+  background-color: #fff;
+  border-radius: 24rpx;
+  position: absolute;
+  left: 80rpx;
+  top: 238rpx
+}
+.helpHead{
+  width: 590rpx;
+  height: 150rpx;
+  background-color: #8C58E8;
+  border-top-left-radius: 24rpx;
+  border-top-right-radius: 24rpx;
+  text-align: center;
+}
+.helpPopupImg{
+  width: 80rpx;
+  height: 96rpx;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+.helpPopupRule{
+  font-size:46rpx;
+  font-weight:500;
+  display: inline-block;
+  vertical-align: bottom;
+  color: #fff;
+  margin-left: 6rpx;
+}
+.floatWindow{
+  width: 362rpx;
+  height: 82rpx;
+  background-image: url(https://tp.datikeji.com/constellation/15382930689591/tOkyINP5DUBQcMREvRTCFRdrEXRINaYxfmV5wUZq.png);
+  background-size: cover;
+  position: absolute;
+  top: 50rpx;
+  left: 40rpx;
+}
+.avatarUrl{
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  top: 6rpx;
+  left: 6rpx;
+}
