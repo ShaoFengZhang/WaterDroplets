@@ -9,6 +9,7 @@
 .headBox {
   width: 750rpx;
   height: 88rpx;
+  position: relative;
 }
 
 .title {
@@ -17,7 +18,10 @@
   font-weight: 300;
   margin: 0 auto;
   display: inline-block;
-  margin-left: 238rpx;
+  /* margin-left: 238rpx; */
+  position: absolute;
+  bottom: 10px;
+  left: 304rpx;
 }
 
 .mainBox {
@@ -150,4 +154,15 @@
   position: absolute;
   bottom: 0;
   left: 121rpx;
+}
+
+/* 新样式 */
+
+.noCollection,.noCollection image{
+	width: 512rpx;
+	height: 524rpx;
+}
+
+.noCollection{
+	margin: 316rpx auto 0;
 }

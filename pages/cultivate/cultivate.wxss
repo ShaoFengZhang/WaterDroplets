@@ -11,11 +11,17 @@
   font-size: 24rpx;
   display: inline-block;
   margin-top: 70rpx;
-  margin-left: 44rpx;
+  /* margin-left: 44rpx; */
+  position: absolute;
+  bottom: 10px;
 }
 
 .week {
-  margin-left: 20rpx;
+  left: 44rpx;
+}
+
+.date{
+	left: 134rpx;
 }
 
 .mainBox {
@@ -24,7 +30,7 @@
   background-image: url(https://tp.datikeji.com/constellation/15379434678162/ZYfO0Bu0veEhVShL2pjr9Eaqmyht93yvGzIM7WQ8.png);
   background-size: cover;
   margin: 0 auto;
-  margin-top: 30rpx;
+  margin-top: 10rpx;
   position: relative;
 }
 
@@ -290,7 +296,7 @@
   background-size: cover;
   position: absolute;
   right: 44rpx;
-  bottom: 705rpx;
+  bottom: 58.5vh;
 }
 
 .flip {

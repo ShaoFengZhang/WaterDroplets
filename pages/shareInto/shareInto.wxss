@@ -12,11 +12,17 @@
   font-size: 24rpx;
   display: inline-block;
   margin-top: 70rpx;
-  margin-left: 44rpx;
+  /* margin-left: 44rpx; */
+  position: absolute;
+  bottom: 10px;
 }
 
 .week {
-  margin-left: 20rpx;
+  left: 44rpx;
+}
+
+.date{
+	left: 134rpx;
 }
 
 .mainBox {
@@ -252,7 +258,7 @@
   background-size: cover;
   position: absolute;
   right: 44rpx;
-  bottom: 705rpx;
+  bottom: 58.5vh;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 0;
   border: none
@@ -268,7 +274,7 @@
   background-size: cover;
   position: absolute;
   left: 44rpx;
-  bottom: 705rpx;
+  bottom: 58.5vh;
 }
 
 .deepCircle {

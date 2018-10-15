@@ -18,6 +18,7 @@
   left:-38rpx;
   box-sizing: border-box;
   border: 4rpx solid #fff;
+  z-index: 999;
 }
 .tabBar{
   width:662rpx;

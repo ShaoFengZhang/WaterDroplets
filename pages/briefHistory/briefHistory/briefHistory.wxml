@@ -1,6 +1,6 @@
 <!--pages/briefHistory/briefHistory/briefHistory.wxml-->
 <!-- 简史 -->
-<view>
+<view style='height:{{height}}px;position: relative;'>
   <text class='date timeText'>{{dateStamp}}</text>
   <text class='week timeText'>{{weekStamp}}</text>
 </view>

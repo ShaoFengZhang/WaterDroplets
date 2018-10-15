@@ -1,5 +1,4 @@
-<!--pages/cultivate/cultivate.wxml-->
-<view class='timeBox'>
+<view class='timeBox' style='height:{{height}}px;position: relative;'>
   <text class='date timeText'>{{dateStamp}}</text>
   <text class='week timeText'>{{weekStamp}}</text>
 </view>
@@ -19,7 +18,7 @@
   </view>
 
   <!-- <view class='sign days3'></view> -->
-  <view class='kettle' bindtap='waterAnimation'></view>
+  <view class='kettle' bindtap='waterAnimation' wx:if="{{!watering}}"></view>
   <block wx:if="{{watering}}">
     <image class='wateringGif' src="https://tp.datikeji.com/constellation/15381269526836/QxGJ4zbxeOTXjuDU38o9WQReZ4pMnZpvtOWqeQzG.gif"></image>
   </block>
@@ -34,8 +33,11 @@
     <view class='grow' bindtap='rotateFn'>成长值>></view>
     <view class='weekList'>
       <view class='item' wx:for="{{weekList}}" wx:key="index">
-        <view class='line {{clock_day >= index+1 ? "deepLine" : ""}}' wx:if="{{index < weekList.length -1}}"></view>
-        <view class='circle {{clock_day >= index+1 ? "deepCircle" : ""}}'>{{item}}</view>
+        <!-- <view class='line {{clock_day >= index+1 ? "deepLine" : ""}}' wx:if="{{index < weekList.length -1}}"></view>
+        <view class='circle {{clock_day >= index+1 ? "deepCircle" : ""}}'>{{item.day}}</view> -->
+
+		<view class='line {{item.isclock == 1 ? "deepLine" : ""}}' wx:if="{{index < weekList.length -1}}"></view>
+        <view class='circle {{item.isclock == 1 ? "deepCircle" : ""}}'>{{item.day}}</view>
       </view>
     </view>
   </view>

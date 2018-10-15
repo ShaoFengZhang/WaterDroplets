@@ -1,5 +1,5 @@
 <!--pages/constellation/constellation.wxml-->
-<view class='timeBox'>
+<view class='timeBox' style='height:{{height}}px'>
   <text class='date timeText'>{{dateStamp}}</text>
   <text class='week timeText'>{{weekStamp}}</text>
 </view>

@@ -1,0 +1,31 @@
+.headBox {
+    width: 750rpx;
+    height: 88rpx;
+    position: relative;
+	overflow: hidden;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 28rpx;
+    font-weight: 300;
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+}
+
+.mainBox image{
+	width: 712rpx;
+	height: 1490rpx;
+}
+
+.mainBox{
+	width: 712rpx;
+	margin: 30rpx auto 0;
+}
+
+.back{
+	z-index: 999;
+}

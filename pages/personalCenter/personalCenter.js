@@ -1,88 +1,50 @@
-// pages/personalCenter/personalCenter.js
 const app = getApp();
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
+    data: {
+		height: app.globalData.statusBarHeight + 44,
+    },
+    //返回前一页
+    backPage() {
+        wx.navigateBack({
+            delta: 1
+        })
+    },
 
-  },
-  //返回前一页
-  backPage() {
-    wx.navigateBack({
-      delta: 1
-    })
-  },
+    //跳转至提现记录页面
+    goRecord() {
+        wx.navigateTo({
+            url: 'putforward/putforward',
+        })
+    },
+    //跳转至我的收藏
+    goCollection() {
+        wx.navigateTo({
+            url: 'collection/collection',
+        })
+    },
 
-  //跳转至提现记录页面
-  goRecord(){
-    wx.navigateTo({
-      url: 'putforward/putforward',
-    })
-  },
-  //跳转至我的收藏
-  goCollection(){
-    wx.navigateTo({
-      url: 'collection/collection',
-    })
-  },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    this.setData({
-      nickName: app.globalData.userInfo.nickName,
-      avatarUrl:app.globalData.userInfo.avatarUrl
-    })
-  },
+    onLoad: function(options) {
+        this.setData({
+            nickName: app.globalData.userInfo.nickName,
+            avatarUrl: app.globalData.userInfo.avatarUrl
+        })
+    },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+    onShow: function() {
 
-  },
+    },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
+    onShareAppMessage: function(e) {
+        if (e && e.from == 'button') {
+            var title = "有人@你  这个好运的宝贝必须推荐给你，比锦鲤还厉害的水滴😘";
+        } else {
+			var title = "点点之间，水滴转转有好运";
+        }
+        return {
+            title: title,
+            path: `/pages/index/index`,
+            success: function(res) {}
+        }
+    }
 })

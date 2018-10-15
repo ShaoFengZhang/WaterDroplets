@@ -1,21 +1,22 @@
-/* pages/constellation/constellation.wxss */
-
-/* page {
-  background-image: url(https://tp.datikeji.com/constellation/15391559122644/ATWiXSh2mBH9FTTrwDbpi5KwIPdHS8H9YvtnFM8L.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
+.timeBox{
+	position: relative;
+}
 
 .timeText {
   color: #f2eaff;
   font-size: 24rpx;
   display: inline-block;
-  margin-top: 70rpx;
-  margin-left: 44rpx;
+  margin-top: 70rpx; 
+  position: absolute;
+  bottom: 10px;
 }
 
 .week {
-  margin-left: 20rpx;
+  left: 44rpx;
+}
+
+.date{
+	left: 134rpx;
 }
 
 .swiper-box {
@@ -29,7 +30,7 @@
   border-radius: 10rpx;
   background-color: #fff;
   margin: 0 auto;
-  margin-top: 34rpx;
+  margin-top: 30rpx;
   position: relative;
   /* display: flex;
   flex-direction: row; */

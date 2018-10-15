@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class='headBox'>
+<view class='headBox' style='height:{{height}}px'>
   <view class='title'>选择你的生日或星座</view>
 </view>
 <view class='mainBox'>

@@ -9,6 +9,7 @@
 .headBox{
   width: 750rpx;
   height: 88rpx;
+  position: relative;
 }
 
 .title{
@@ -17,14 +18,16 @@
   font-weight: 300;
   margin: 0 auto;
   display: inline-block;
-  margin-left: 238rpx;
-
+  /* margin-left: 238rpx; */
+	position: absolute;
+	bottom: 10px;
+	left: 304rpx;
 }
 .mainBox{
   width: 662rpx;
   height: 1082rpx;
   background-color: #fff;
-  margin: 0 auto;
+  margin: 30rpx auto 0;
   border-radius: 10rpx;
   margin-top:106rpx;
 }
@@ -32,7 +35,7 @@
   width: 218rpx;
   height: 218rpx;
   position: absolute;
-  top: 130rpx;
+  top: 160rpx;
   left:266rpx;
   background-image: url(https://tp.datikeji.com/constellation/15380440815728/7q8wD2zfcXj4z0q5QP52RVM36YqUgMMnDvIGo54x.png);
   background-size: cover;

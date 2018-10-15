@@ -11,11 +11,17 @@
   font-size: 24rpx;
   display: inline-block;
   margin-top: 70rpx;
-  margin-left: 44rpx;
+  /* margin-left: 44rpx; */
+  position: absolute;
+  bottom: 10px;
 }
 
 .week {
-  margin-left: 20rpx;
+  left: 44rpx;
+}
+
+.date{
+	left: 134rpx;
 }
 
 .historyBox {
@@ -24,7 +30,7 @@
   border-radius: 10rpx;
   background-color: #fff;
   margin: 0 auto;
-  margin-top: 33rpx;
+  margin-top: 23rpx;
   position: relative;
 }
 

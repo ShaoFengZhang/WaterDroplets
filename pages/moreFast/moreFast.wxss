@@ -7,99 +7,165 @@
 } */
 
 .headBox {
-  width: 750rpx;
-  height: 88rpx;
+    width: 750rpx;
+    height: 88rpx;
+    position: relative;
 }
 
 .title {
-  color: #fff;
-  font-size: 36rpx;
-  font-weight: 300;
-  margin: 0 auto;
-  display: inline-block;
-  margin-left: 238rpx;
-  vertical-align:bottom;
+    color: #fff;
+    font-size: 36rpx;
+    font-weight: 300;
+    margin: 0 auto;
+    display: inline-block;
+    /* margin-left: 238rpx; */
+    position: absolute;
+    bottom: 10px;
+    left: 304rpx;
+    vertical-align: bottom;
 }
 
 .mainBox {
-  width: 662rpx;
-  height: 1104rpx;
-  background-image: url(https://tp.datikeji.com/constellation/15382799528972/PD9Qgeu0o9G8whmt80JZWPGEt6xaQ7QhHKSSOig4.png);
-  background-size: cover;
-  margin: 0 auto;
-  margin-top: 85rpx;
-  position: relative;
+    width: 662rpx;
+    height: 1104rpx;
+    background-image: url(https://tp.datikeji.com/constellation/15382799528972/PD9Qgeu0o9G8whmt80JZWPGEt6xaQ7QhHKSSOig4.png);
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 85rpx;
+    position: relative;
 }
 
 .growthRule {
-  font-size: 22rpx;
-  color: #e3d4fe;
-  width: 154rpx;
-  height: 23rpx;
-  position: absolute;
-  right: 60rpx;
-  top: 102rpx;
+    font-size: 22rpx;
+    color: #e3d4fe;
+    width: 154rpx;
+    height: 23rpx;
+    position: absolute;
+    right: 60rpx;
+    top: 102rpx;
 }
 
 .qrcode {
-  width: 170rpx;
-  height: 170rpx;
-  position: absolute;
-  right: 76rpx;
-  top: 408rpx;
-  border-radius: 50%;
+    width: 170rpx;
+    height: 170rpx;
+    position: absolute;
+    right: 76rpx;
+    top: 408rpx;
+    border-radius: 50%;
 }
 
 .plantImg {
-  width: 304rpx;
-  height: 328rpx;
-  position: absolute;
-  right: 174rpx;
-  bottom: 234rpx;
+    width: 304rpx;
+    height: 328rpx;
+    position: absolute;
+    right: 174rpx;
+    bottom: 234rpx;
 }
 
 .btnBox {
-  width: 512rpx;
-  height: 98rpx;
-  position: absolute;
-  left: 75rpx;
-  bottom: 104rpx;
+    width: 512rpx;
+    height: 98rpx;
+    position: absolute;
+    left: 75rpx;
+    bottom: 104rpx;
 }
-.savePic{
-  width: 248rpx;
-  height: 98rpx;
-  background-image: url(https://tp.datikeji.com/constellation/15382814269984/zyAkHZrgKo18i6IQ5WyiP7SF977RFw3RoVGGgMLU.png);
-  background-size: cover;
-  display: inline-block;
-  margin-right: 16rpx;
+
+.savePic {
+    width: 248rpx;
+    height: 98rpx;
+    background-image: url(https://tp.datikeji.com/constellation/15382814269984/zyAkHZrgKo18i6IQ5WyiP7SF977RFw3RoVGGgMLU.png);
+    background-size: cover;
+    display: inline-block;
+    margin-right: 16rpx;
 }
-.share{
-  width: 248rpx;
-  height: 98rpx;
-  background-image: url(https://tp.datikeji.com/constellation/15382814946015/KTPSc1LrlYFgPfX855sLUVeSbVu2UsMxKJ3gC1I6.png);
-  background-size: cover;
-  display: inline-block;
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  border-radius: 0;
+
+.share {
+    width: 248rpx;
+    height: 98rpx;
+    background-image: url(https://tp.datikeji.com/constellation/15382814946015/KTPSc1LrlYFgPfX855sLUVeSbVu2UsMxKJ3gC1I6.png);
+    background-size: cover;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 0;
 }
-.share:after{
-  border: none;
-  border-radius: 0;
+
+.share:after {
+    border: none;
+    border-radius: 0;
 }
-.howShare{
-  color: #E3D4FE;
-  font-size: 22rpx;
-  width: 272rpx;
-  height: 23rpx;
-  position: absolute;
-  left: 195rpx;
-  bottom: 24rpx
+
+.howShare {
+    color: #e3d4fe;
+    font-size: 22rpx;
+    width: 272rpx;
+    height: 23rpx;
+    position: absolute;
+    left: 195rpx;
+    bottom: 24rpx;
 }
-.myCanvas{
-  width: 574rpx;
-  height: 746rpx;
-  position: absolute;
-  left: -9999rpx;
-  bottom: -500rpx;
+
+.myCanvas {
+    width: 574rpx;
+    height: 746rpx;
+    position: absolute;
+    left: -9999rpx;
+    bottom: -500rpx;
+}
+
+/* GroupRouler */
+
+.GroupRulerView {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.GroupRulerBody {
+    width: 590rpx;
+    height: 714rpx;
+    border-radius: 24rpx;
+    background-color: #fff;
+    position: absolute;
+    top: 23vh;
+    left: 80rpx;
+}
+
+.topTitle {
+    width: 100%;
+    height: 150rpx;
+    background: rgba(140, 88, 232, 1);
+    border-radius: 24rpx 24rpx 0 0;
+    font-size: 46rpx;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 150rpx;
+}
+
+.topTitle image {
+    width: 80rpx;
+    height: 96rpx;
+    vertical-align: middle;
+}
+
+.groupRulerImg {
+    width: 590rpx;
+    height: 480rpx;
+}
+
+.IKonwTxt {
+    width: 100%;
+    height: 68rpx;
+    font-size: 30rpx;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: rgba(76, 76, 76, 1);
+	line-height: 68rpx;
+	text-align: center;
+	border-top: 2rpx solid #E2E2E2;
 }

@@ -10,7 +10,8 @@
     "pages/personalCenter/putforward/putforward",
     "pages/personalCenter/collection/collection",
     "pages/moreFast/moreFast",
-    "pages/shareInto/shareInto"
+    "pages/shareInto/shareInto",
+    "pages/topPrompt/topPrompt"
   ],
   "window": {
     "backgroundTextStyle": "light",

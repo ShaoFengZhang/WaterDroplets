@@ -1,16 +1,28 @@
 <!--pages/moreFast/moreFast.wxml-->
-<view class='headBox'>
+<view class='headBox' style='height:{{height}}px'>
   <image class='back' src='/images/back.png' bindtap='backPage'></image>
   <view class='title'>助力成长</view>
 </view>
 <view class='mainBox'>
-  <view class='growthRule'>成长值规则>></view>
+  <view class='growthRule' bindtap='showGroupRuler'>成长值规则>></view>
   <image class='qrcode' src='{{qrcodeImg}}'></image>
   <image class='plantImg' src='{{plantImg}}'></image>
   <view class='btnBox'>
     <view class='savePic' bindtap='savePic'></view>
     <button class='share' open-type='share'></button>
   </view>
-  <view class='howShare'>怎么保存海报发送朋友圈?</view>
+  <view class='howShare' bindtap='gotoTopprotom' >怎么保存海报发送朋友圈?</view>
 </view>
+
+<view class='GroupRulerView' wx:if="{{isShowRulerView}}">
+	<view class='GroupRulerBody'>
+		<view class='topTitle'>
+			<image src='/images/flower.png' />
+			成长值规则
+		</view>
+		<image class='groupRulerImg' src='/images/groupRuler.png' />
+		<view class='IKonwTxt' bindtap='closeRulerView'>我知道了</view>
+	</view>
+</view>
+
 <canvas canvas-id='myCanvas' class='myCanvas'></canvas>

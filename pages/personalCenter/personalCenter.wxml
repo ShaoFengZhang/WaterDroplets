@@ -1,5 +1,5 @@
 <!--pages/personalCenter/personalCenter.wxml-->
-<view class='headBox'>
+<view class='headBox' style='height:{{height}}px'>
   <image class='back' src='/images/back.png' bindtap='backPage'></image>
   <view class='title'>个人中心</view>
 </view>

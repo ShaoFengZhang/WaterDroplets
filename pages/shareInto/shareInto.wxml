@@ -1,6 +1,6 @@
 <!--pages/shareInto/shareInto.wxml-->
 <!--pages/cultivate/cultivate.wxml-->
-<view class='timeBox'>
+<view class='timeBox' style='height:{{height}}px;position: relative;'>
   <text class='date timeText'>{{dateStamp}}</text>
   <text class='week timeText'>{{weekStamp}}</text>
 </view>

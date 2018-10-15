@@ -11,5 +11,24 @@ page {
   margin-left: 22rpx;
   display: inline-block;
   vertical-align:bottom;
+  position: absolute;
+  bottom: 10px;
 }
+/* .headBox {
+    width: 750rpx;
+    height: 88rpx;
+    position: relative;
+	overflow: hidden;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 36rpx;
+    font-weight: 300;
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+} */
 @import "/template/template.wxss";

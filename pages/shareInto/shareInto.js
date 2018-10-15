@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+	height: app.globalData.statusBarHeight + 44,
     plantImg: "https://tp.datikeji.com/constellation/15381264984469/4xIy5AXftNe7m7IUv8pfiA6jIjLVbCD7ENpBNJBQ.png",
     // plantPopupImg: "https://tp.datikeji.com/constellation/15381901994499/3wKR5bvoWZyldZIIvE4Yym6age9NO7s9mMfnw5IU.png",
     weekList: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
