@@ -25,7 +25,7 @@
           <calendar weeks-type="cn" cell-size="30" next="true" prev="true" calendar-style="demo4-calendar" header-style="demo4-header" board-style="demo4-board" days-color="{{demo4_days_style}}" binddayClick="dayClick" />
           <view class='btnBox'>
             <view class='today' bindtap='getTodayHistory'></view>
-            <view class='confirm' bindtap='getTodayHistory'></view>
+            <view class='confirm' bindtap='getHistory'></view>
           </view>
         </view>
       </view>

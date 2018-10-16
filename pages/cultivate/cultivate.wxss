@@ -498,7 +498,7 @@ opacity: 0;
 .share {
   width: 246rpx;
   height: 96rpx;
-  background-image: url(https://tp.datikeji.com/constellation/15381154899870/vuC88oQoFqataoYqbpqOQvKXpexPs8XVNh1g1xmo.png);
+  background-image: url(https://tp.datikeji.com/a/15396766614053/vctMIL7fGsGIsD6CijnSpWiQ14Xtn5qRYWA3lqGI.png);
   background-size: cover;
   display: inline-block;
   background-color: rgba(0, 0, 0, 0);
@@ -587,7 +587,7 @@ opacity: 0;
 .goWithDraw2{
   width: 267rpx;
   height: 98rpx;
-  background-image: url(https://tp.datikeji.com/constellation/15381915216241/S7NSISKCbb2zLO20iVyK5Ut5uZg291NXulzbv9aN.png);
+  background-image: url(https://tp.datikeji.com/a/15395975452995/V44RUrQXEA2uRHhE78XQD0X5t38rZnvTTCdq3jdM.png);
   background-size: cover;
   display: inline-block;
   margin-right: 21rpx;
@@ -595,7 +595,7 @@ opacity: 0;
 .share2{
   width: 267rpx;
   height: 98rpx;
-  background-image: url(https://tp.datikeji.com/constellation/15381915941868/QprIlFHqS4GnIea0zPAiSEQuPrTwi8GxVgRsd8bd.png);
+  background-image: url(https://tp.datikeji.com/a/15395975931077/cBklFstsd8f5i7WH9oTWQ2fuCUZWOBLX7wVcbDUV.png);
   background-size: cover;
   display: inline-block;
   background-color: rgba(0, 0, 0, 0);

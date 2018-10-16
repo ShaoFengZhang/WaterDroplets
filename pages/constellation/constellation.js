@@ -1,4 +1,5 @@
 const util = require('../../utils/util.js');
+import imageList from '../../utils/imgList.js';
 const app = getApp();
 var template = require('../../template/template.js');
 Page({
@@ -73,7 +74,7 @@ Page({
 
     onLoad: function(options) {
         app.d.userId = wx.getStorageSync("userId");
-        app.globalData.imgList = wx.getStorageSync("imgList");
+		app.globalData.imgList = imageList.imglist;
         app.globalData.userInfo.openId = wx.getStorageSync("openId");
         var weekArr = ["日", "一", "二", "三", "四", "五", "六"];
         var index = new Date().getDay();

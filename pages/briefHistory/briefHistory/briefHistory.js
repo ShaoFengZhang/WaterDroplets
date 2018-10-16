@@ -35,29 +35,59 @@ Page({
             showCalendar: 0
         })
         wx.request({
-                url: app.globalData.appUrl + 'getHistory',
-                method: "POST",
-                data: {
-                    user_id: 6,
-                    month: this.data.month,
-                    day: this.data.day
-                },
-                success(res) {
-                    console.log("历史上的今天:" + res)
-                    if (res.data.code == 0) {
-                        app.globalData.todayHistoryArr = res.data.data.result;
-                        console.log(app.globalData.todayHistoryArr)
-                        that.setData({
-                            todayHistoryArr: res.data.data.result
-                        })
-                    }
-                }
-            }),
+			url: app.globalData.appUrl + 'getHistory',
+			method: "POST",
+			data: {
+				user_id: app.d.userId,
+				month: this.data.month,
+				day: this.data.day
+			},
+			success(res) {
+				console.log("历史上的今天:" + res)
+				if (res.data.code == 0) {
+					app.globalData.todayHistoryArr = res.data.data.result;
+					console.log(app.globalData.todayHistoryArr)
+					that.setData({
+						todayHistoryArr: res.data.data.result
+					})
+				}
+			}
+		}),
 
-            this.setData({
-                showCalendar: 0
-            })
+		this.setData({
+			showCalendar: 0
+		})
     },
+	//点击确定
+	getHistory(){
+		var that = this;
+		// this.getNowTime();
+		this.setData({
+			showCalendar: 0
+		})
+		wx.request({
+			url: app.globalData.appUrl + 'getHistory',
+			method: "POST",
+			data: {
+				user_id: app.d.userId,
+				month: this.data.month,
+				day: this.data.demo4_days_style[0].day
+			},
+			success(res) {
+				console.log("历史上的今天:" + res)
+				if (res.data.code == 0) {
+					app.globalData.todayHistoryArr = res.data.data.result;
+					console.log(app.globalData.todayHistoryArr)
+					that.setData({
+						todayHistoryArr: res.data.data.result
+					})
+				}
+			}
+		}),
+		this.setData({
+			showCalendar: 0
+		})
+	},
 
     //历史详情
     historyDetails(e) {

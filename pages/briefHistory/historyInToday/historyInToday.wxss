@@ -6,16 +6,29 @@
 } */
 
 .textBox{
-  width: 90%;
+  width: 100%;
   display: inline-block;
-  vertical-align: top;  
+  vertical-align: top;
+  position: relative;  
 }
+
+
 .timeText {
   color: #f2eaff;
   font-size: 24rpx;
   display: inline-block;
   margin-top: 70rpx;
-  margin-left: 44rpx;
+  /* margin-left: 44rpx; */
+  position: absolute;
+  bottom: 10px;
+}
+
+.week {
+  left: 64rpx;
+}
+
+.date{
+	left: 154rpx;
 }
 .eventBox{
   width: 662rpx;

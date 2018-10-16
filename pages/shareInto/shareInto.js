@@ -23,144 +23,118 @@ Page({
     watering: 0,
   },
 
-  //浇水动画
-  watering() {
-    var that = this;
-    this.setData({
-      watering: 1
-    })
-    setTimeout(function () {
-      that.setData({
-        watering: 0
-      })
-    }, 2300);
-  },
-
-  //判断植物等级
-  plantLevel() {
-    if (this.data.grouth >= 600) {
-      this.setData({
-        plantImg: "https://tp.datikeji.com/constellation/15381232044133/Nec69FhWNVfOUqZ0GkJ1CfJ8D9QWFIBFvakOaTp6.png"
-      })
-    }
-  },
-
-  //浇水
-  watering(status) {
-    wx.request({
-      url: app.globalData.appUrl + 'watering',
-      data: {
-        user_id: app.d.userId,
-        status: status,
-        grouth: "10"
-      },
-      method: "POST",
-      success(res) {
-        if (res.data.code == 0) {
-          console.log(res)
-        }
-      }
-    })
-  },
-
-  //授权
-  onGotUserInfo(e) {
-    var that = this;
-    if (e.detail.userInfo) {
-      wx.showLoading({
-        title: '加载中...',
-      });
-      app.globalData.userInfo = e.detail.userInfo;
-      var nickName = e.detail.userInfo.nickName;
-      var iv = e.detail.iv.replace(/\s*/g, "");
-      wx.setStorageSync("userInfo", e.detail.userInfo);
-      app.globalData.userInfo = e.detail.userInfo;
-      this.setData({
-        encryptedData: e.detail.encryptedData,
-        iv: iv
-      });
-      wx.login({
-        success: res => {
-          var code = res.code;
-          wx.request({
-            url: app.globalData.appUrl + "login",
-            data: {
-              code: res.code,
-            },
-            method: 'POST',
-            header: {
-              'content-type': 'application/json' // 默认值
-            },
-            success(res) {
-              console.log(res)
-              if (res.data.code == 0) {
-                var session_key = res.data.data.session_key
-                app.d.userId = res.data.data.userid;
-                app.globalData.userInfo.openId = res.data.data.openId;
-                that.loginUser(session_key);
-              } else if (res.data.code == 1) {
-                app.d.userId = res.data.data.userid;
-                app.globalData.userInfo.openId = res.data.data.openId;
-                
-                wx.redirectTo({
-                  url: '/pages/cultivate/cultivate',
-                });
-                wx.hideLoading();
-                
-              }
-            }
-          })
-        }
-      });
-    }
-  },
-  //登录
-  loginUser(session_key) {
-    var that = this;
-    wx.login({
-      success: res => {
-        var code = res.code;
-        wx.request({
-          url: app.globalData.appUrl + "getUserinfo",
-          data: {
-            session_key: session_key,
-            encryptedData: this.data.encryptedData,
-            iv: this.data.iv,
-            user_id: app.d.userId
-          },
-          method: 'POST',
-          header: {
-            'content-type': 'application/json' // 默认值
-          },
-          success(res) {
-            console.log(res)
-            if (res.data.code == 0) {
-              console.log(res)
-              wx.redirectTo({
-                url: '/pages/cultivate/cultivate',
-              });
-            }
-          }
-        })
-      }
-    })
-  },
-
   //返回首页
   backHome(){
     wx.redirectTo({
       url: '/pages/index/index',
     })
   },
-  //成长值规则
-  // showRule(){
-  //   this.setData({
-  //     showPopup:3
-  //   })
-  // },
-  /**
-   * 生命周期函数--监听页面加载
-   */
+
+
+  //获取用户信息
+  getUserData(){
+	  var that = this;
+	  wx.request({
+		  url: app.globalData.appUrl + 'getUserData',
+		  method: "POST",
+		  data:{
+			  user_id: that.data.masterId
+		  },
+		  success(res){
+			  if(res.data.code == 0){
+				  console.log(res.data)
+				  that.setData({
+					  avatarUrl: res.data.data.pic,
+					  grouth: res.data.data.grouth,
+					  userName: res.data.data.userName
+				  })
+				  that.plantLevel();
+			  }
+		  }
+	  })
+  },
+
+	//判断植物升级阈值
+	plantLevel() {
+		var grouth = this.data.grouth;
+		// var grouthUpgrade = this.data.grouthUpgrade;
+		if (grouth > 10 && grouth <= 200) {
+			grouth = 200;
+		} else if (grouth > 200 && grouth <= 600) {
+			grouth = 600;
+		} else if (grouth > 600 && grouth <= 1000) {
+			this.setData({
+				plantImg: "https://tp.datikeji.com/constellation/15381232044133/Nec69FhWNVfOUqZ0GkJ1CfJ8D9QWFIBFvakOaTp6.png",
+				plantPopupImg: "https://tp.datikeji.com/constellation/15381920755274/pjjZGIejakcL6omWSM0OANTZLVzGyTkIjFyLOomX.png"
+			})
+			grouth = 1000;
+		} else if (grouth > 1000 && grouth <= 1600) {
+			grouth = 1600;
+		} else if (grouth > 1600 && grouth <= 2500) {
+			grouth = 2500;
+		} else if (grouth <= 10) {
+			grouth = 0;
+		}
+		console.log(grouth)
+		this.setData({
+			upgrade: grouth
+		})
+	},
+
+	//好友助力浇水
+	userAssistance() {
+		var that = this;
+		var assistance_id = wx.getStorageSync("openId");
+		wx.request({
+			url: app.globalData.appUrl + 'userAssistance',
+			data: {
+				user_id: that.data.masterId,
+				assistance_id: assistance_id
+				// open_id: all_grouth
+			},
+			method: "POST",
+			success(res) {
+				if (res.data.code == 0) {
+					wx.showToast({
+						title: res.data.msg,
+						icon: "none",
+						duration: 1500
+					})
+				} else if (res.data.code == -3 || res.data.code == -2) {
+					wx.showToast({
+						title: res.data.msg,
+						icon: "none",
+						duration: 1500
+					})
+				} else if (res.data.code == -1) {
+					wx.showToast({
+						title: "发生错误，请稍后尝试！",
+						icon: "none",
+						duration: 1500
+					})
+				} else if (res.data.code == -5){
+					wx.redirectTo({
+						url: '/pages/index/index',
+					})
+				}
+			}
+		})
+	},
+
+	//浇水动画
+	waterAnimation() {
+		var that = this;
+		that.userAssistance();
+		this.setData({
+			watering: 1
+		});
+		setTimeout(function () {
+			that.setData({
+				watering: 0
+			})
+		}, 2300);
+	},
+
   onLoad: function (options) {
     console.log(options)
     var that = this;
@@ -170,18 +144,35 @@ Page({
     var month = util.formatTime(new Date()).substr(5, 2);
     var date = util.formatTime(new Date()).substr(8, 2);
     var dateStamp = month + "月" + date + "日";
+	if (options.scene) {
+		let scene = decodeURIComponent(options.scene);
+		that.setData({
+			masterId:  scene
+		})
+		console.log(scene)
+	};
+	if (options.masterId){
+		this.setData({
+			masterId: options.masterId,
+			grouth: options.grouth,
+			upgrade: options.upgrade,
+			plantImg: options.plantImg,
+			avatarUrl: options.avatarUrl
+		})
+	}
+	//   console.log(options.masterId)
+	//   console.log(wx.getStorageSync("openId"))
+	// if (options.masterId == wx.getStorageSync("openId")){
+	// 	wx.redirectTo({
+	// 		url: '/pages/cultivate/cultivate',
+	// 	})
+	// }
     this.setData({
       dateStamp: dateStamp,
       weekStamp: weekStamp,
     });
-    this.setData({
-      masterId: options.masterId,
-      grouth: options.grouth,
-      upgrade: options.upgrade,
-      plantImg: options.plantImg,
-      avatarUrl: options.avatarUrl
-    })
-    this.plantLevel();
+	this.getUserData();
+    // this.plantLevel();
   },
 
   /**

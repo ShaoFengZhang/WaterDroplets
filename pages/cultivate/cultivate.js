@@ -61,7 +61,8 @@ Page({
         showPopup: 0, //控制打卡弹窗显示
         watering: 0,
         grouthUpgrade: 0,
-        grouth: 0
+        grouth: 0,
+		showPopup2:0
     },
     //翻转动画
     rotateFn: function(e) {
@@ -109,7 +110,7 @@ Page({
                         showPopup: 1,
                         updateList: res.data.data
                     })
-                    that.plantLevel();
+					that.plantLevel();
                     that.saveClock();
 
                 }
@@ -170,6 +171,8 @@ Page({
 
     //跳转至提现页
     goWithDraw() {
+		this.plantLevel();
+		
         wx.navigateTo({
             url: '/pages/personalCenter/putforward/putforward',
         })
@@ -178,9 +181,14 @@ Page({
     //关闭弹窗
     close() {
         this.setData({
-            showPopup: 0
+            showPopup: 0,
         })
     },
+	close2() {
+		this.setData({
+			showPopup2: 0,
+		})
+	},
 
     //显示帮助
     showHelp() {
@@ -235,8 +243,9 @@ Page({
 
     //更快成长
     goMoreFast() {
+		console.log(this.data.grouth)
         wx.navigateTo({
-            url: '../moreFast/moreFast?plantImg=' + this.data.plantImg,
+			url: `../moreFast/moreFast?plantImg=${this.data.plantImg}&grouth=${this.data.grouth}&upgrade=${this.data.upgrade}`,
         })
     },
 
@@ -262,6 +271,8 @@ Page({
                 } else if (res.data.code == 2) {
                     that.setData({
                         grouthUpgrade: res.data.grouth,
+						showPopup2:1,
+						num:res.data.num
                     })
                 } else if (res.data.code == -2 || res.data.code == -3) {
                     wx.showToast({

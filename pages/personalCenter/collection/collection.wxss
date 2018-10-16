@@ -7,162 +7,168 @@
 } */
 
 .headBox {
-  width: 750rpx;
-  height: 88rpx;
-  position: relative;
+    width: 750rpx;
+    height: 88rpx;
+    position: relative;
 }
 
 .title {
-  color: #fff;
-  font-size: 36rpx;
-  font-weight: 300;
-  margin: 0 auto;
-  display: inline-block;
-  /* margin-left: 238rpx; */
-  position: absolute;
-  bottom: 10px;
-  left: 304rpx;
+    color: #fff;
+    font-size: 36rpx;
+    font-weight: 300;
+    margin: 0 auto;
+    display: inline-block;
+    /* margin-left: 238rpx; */
+    position: absolute;
+    bottom: 10px;
+    left: 304rpx;
 }
 
 .mainBox {
-  width: 662rpx;
-  height: 1144rpx;
-  background-color: #fff;
-  margin: 0 auto;
-  border-radius: 10rpx;
-  margin-top: 55rpx;
+    width: 662rpx;
+    height: 1144rpx;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 10rpx;
+    margin-top: 55rpx;
 }
 
 .blank {
-  width: 100%;
-  height: 44rpx;
+    width: 100%;
+    height: 44rpx;
 }
 
 .item {
-  width: 100%;
-  height: 114rpx;
-  position: relative;
-  margin-top: 32rpx;
+    width: 100%;
+    height: 114rpx;
+    position: relative;
+    margin-top: 32rpx;
 }
 
 .item:first-child {
-  padding-top: 44rpx;
+    padding-top: 44rpx;
 }
 
 .timeBox {
-  width: 100rpx;
-  height: 114rpx;
-  display: inline-block;
-  margin-left: 40rpx;
+    width: 100rpx;
+    height: 114rpx;
+    display: inline-block;
+    margin-left: 40rpx;
 }
 
 .year {
-  font-size: 22rpx;
-  color: #4c4c4c;
+    font-size: 22rpx;
+    color: #4c4c4c;
 }
 
 .month {
-  font-size: 22rpx;
-  color: #959595;
+    font-size: 22rpx;
+    color: #959595;
 }
 
 .imgBox {
-  position: absolute;
-  left: 160rpx;
-  top: 48rpx;
-  width: 20rpx;
-  height: 140rpx;
+    position: absolute;
+    left: 160rpx;
+    top: 48rpx;
+    width: 20rpx;
+    height: 140rpx;
 }
 
 .circle {
-  width: 20rpx;
-  height: 20rpx;
-  background-image: url(https://tp.datikeji.com/constellation/15375139078705/KkRVudfQ5IfJBtiwTpbWsIDg2bvnXfWZCPiyTwcx.png);
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
+    width: 20rpx;
+    height: 20rpx;
+    background-image: url(https://tp.datikeji.com/constellation/15375139078705/KkRVudfQ5IfJBtiwTpbWsIDg2bvnXfWZCPiyTwcx.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .vertical {
-  width: 1rpx;
-  height: 126rpx;
-  background-color: #e9e9e9;
-  position: absolute;
-  top: 20rpx;
-  left: 10rpx;
+    width: 1rpx;
+    height: 126rpx;
+    background-color: #e9e9e9;
+    position: absolute;
+    top: 20rpx;
+    left: 10rpx;
 }
 
 .event {
-  width: 422rpx;
-  height: 100rpx;
-  border-radius: 10rpx;
-  box-shadow: 0 0 8rpx 0 rgba(115, 115, 115, 0.3);
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 70rpx;
-  margin-bottom: 32rpx;
-  font-size: 28rpx;
-  color: #333;
-  line-height: 30rpx;
-  text-overflow: -o-ellipsis-lastline;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  position: relative;
+    width: 422rpx;
+    height: 100rpx;
+    border-radius: 10rpx;
+    box-shadow: 0 0 8rpx 0 rgba(115, 115, 115, 0.3);
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 70rpx;
+    margin-bottom: 32rpx;
+    font-size: 28rpx;
+    color: #333;
+    line-height: 30rpx;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    position: relative;
 }
 
 .eventDes {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 375rpx;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 375rpx;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 
 .del {
-  background-color: rgba(153, 106, 236 , 0.5);
-  width: 88rpx;
-  height: 100rpx;
-  font-size: 28rpx;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  -webkit-transform: translateX(88px);
-  transform: translateX(88px);
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  margin-left:158rpx;
+    background-color: rgba(153, 106, 236, 0.5);
+    width: 88rpx;
+    height: 100rpx;
+    font-size: 28rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    -webkit-transform: translateX(88px);
+    transform: translateX(88px);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    margin-left: 158rpx;
 }
-.default{
-  width: 512rpx;
-  height: 524rpx;
-  background-image: url(https://tp.datikeji.com/constellation/15391626415727/539vpRK5JnVFozZpm2sBLKcvwYai2yvvYaxmqvBd.png);
-  background-size: cover;
-  position: absolute;
-  top: 462rpx;
-  left: 119rpx;
+
+.default {
+    width: 512rpx;
+    height: 524rpx;
+    background-image: url(https://tp.datikeji.com/constellation/15391626415727/539vpRK5JnVFozZpm2sBLKcvwYai2yvvYaxmqvBd.png);
+    background-size: cover;
+    position: absolute;
+    top: 462rpx;
+    left: 119rpx;
 }
-.goCollection{
-  width: 270rpx;
-  height: 90rpx;
-  background-image: url(https://tp.datikeji.com/constellation/15391621267800/TsKO4gR9gNzE1zci9DZmc8OgBJMeVR78asg6iqg6.png);
-  background-size: cover;
-  position: absolute;
-  bottom: 0;
-  left: 121rpx;
+
+.goCollection {
+    width: 270rpx;
+    height: 90rpx;
+    background-image: url(https://tp.datikeji.com/constellation/15391621267800/TsKO4gR9gNzE1zci9DZmc8OgBJMeVR78asg6iqg6.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 121rpx;
 }
 
 /* 新样式 */
 
-.noCollection,.noCollection image{
-	width: 512rpx;
-	height: 524rpx;
+.noCollection, .noCollection image {
+    width: 512rpx;
+    height: 524rpx;
 }
 
-.noCollection{
-	margin: 316rpx auto 0;
+.noCollection {
+    margin: 316rpx auto 0;
 }

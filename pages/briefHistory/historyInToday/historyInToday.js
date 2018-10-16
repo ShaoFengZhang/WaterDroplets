@@ -3,7 +3,8 @@ const app = getApp()
 Page({
 
     data: {
-        collected: 0
+        collected: 0,
+		height: app.globalData.statusBarHeight + 44,
     },
 
     //返回前一页

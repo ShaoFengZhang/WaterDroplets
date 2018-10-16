@@ -86,7 +86,7 @@
     </view>
   </view>
 
-  <view class='shadow' wx:if="{{showPopup == 2}}">
+  <view class='shadow' wx:if="{{showPopup2 == 1}}">
     <view class='plantLevel'>
       <image class='plantPopupImg' src='{{plantPopupImg}}'></image>
       <view class='headBox'>
@@ -100,7 +100,7 @@
           </view>
         </view>
         <view class='btnplantPopup' >
-          <view class='goWithDraw2' bindtap='goWithDraw'></view>
+          <view class='goWithDraw2' bindtap='close2'></view>
           <button class='share2' open-type='share'></button>
         </view>
       </view>

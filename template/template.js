@@ -19,7 +19,7 @@ function tabbarinit(avatarUrl) {
       "pagePath": "/pages/cultivate/cultivate",
       "iconPath": "https://tp.datikeji.com/constellation/15372395404986/FNYRFG39QQVzgJ4nx1HL5H0jNvNhA70hTSoCkiCN.png",
       "selectedIconPath": "https://tp.datikeji.com/constellation/15372395733717/0MqzYZWVHTy0edHMVzFWIGr3hYlyMg1hjUwAjSU6.png",
-      "text": "养成"
+      "text": "水滴森林"
     }
   ]
 }

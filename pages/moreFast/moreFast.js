@@ -130,6 +130,7 @@ Page({
 
     onLoad: function(options) {
         var that = this;
+		that.openId = wx.getStorageSync("openId");		
         console.log(options)
         wx.showLoading({
             title: '生成中',
@@ -144,16 +145,19 @@ Page({
             }
         });
         that.setData({
-            plantImg: options.plantImg
+            plantImg: options.plantImg,
+			grouth: options.grouth,
+			upgrade: options.upgrade
         })
         that.darwBgImg();
-        var qrcodeImg = app.globalData.appUrl + 'get_qrcode?pages=' + '&scene=1';
+		var qrcodeImg = app.globalData.appUrl + `get_qrcode?page=pages/shareInto/shareInto&scene=${that.openId}`;
         that.setData({
             qrcodeImg: qrcodeImg
         })
     },
 
     onShareAppMessage: function(e) {
+		console.log(`/pages/shareInto/shareInto?masterId=${wx.getStorageSync("openId")}&grouth=${this.data.grouth}&upgrade=${this.data.upgrade}&plantImg=${this.data.plantImg}&avatarUrl=${app.globalData.userInfo.avatarUrl}`)
         if (e && e.from == 'button') {
             var title = '有人@你 老铁就差你了，快来帮我浇水领红包🤝 '
         } else {
@@ -161,7 +165,7 @@ Page({
         }
         return {
             title: title,
-			path: `/pages/shareInto/shareInto?masterId=${app.d.userId}&grouth=${this.data.grouth}&upgrade={this.data.upgrade}&plantImg=${this.data.plantImg}&avatarUrl=${app.globalData.userInfo.avatarUrl}`,
+			path: `/pages/shareInto/shareInto?masterId=${this.openId}&grouth=${this.data.grouth}&upgrade=${this.data.upgrade}&plantImg=${this.data.plantImg}&avatarUrl=${app.globalData.userInfo.avatarUrl}`,
             success: function(res) {}
         }
     },
