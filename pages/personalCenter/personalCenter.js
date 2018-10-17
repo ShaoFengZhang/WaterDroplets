@@ -44,6 +44,7 @@ Page({
         return {
             title: title,
             path: `/pages/index/index`,
+			imageUrl: "https://tp.datikeji.com/a/15396917198531/1tskpoyy8TzS1xmP60myIpQEQgMYDUXP0pRqAERI.png",
             success: function(res) {}
         }
     }

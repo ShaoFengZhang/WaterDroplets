@@ -166,6 +166,7 @@ Page({
         return {
             title: title,
 			path: `/pages/shareInto/shareInto?masterId=${this.openId}&grouth=${this.data.grouth}&upgrade=${this.data.upgrade}&plantImg=${this.data.plantImg}&avatarUrl=${app.globalData.userInfo.avatarUrl}`,
+			imageUrl:"https://tp.datikeji.com/a/15396913934422/Gj6Ul1gIsVn0VQ4Hf2mo25ZNFP8jtw4I0F6Nn0YR.png",
             success: function(res) {}
         }
     },

@@ -35,15 +35,13 @@
 <button class='findOthers' open-type='share'></button>
 <!-- <view class='backHome' bindtap='backHome'></view> -->
 <!-- 遮罩层 -->
-<block>
-  <!-- 帮助 -->
-  <view class='shadow' wx:if="{{showPopup == 3}}">
+<view class='shadow' wx:if="{{showPopup == 3}}">
     <view class='helpPopup'>
       <view class='helpHead'>
         <image class='helpPopupImg' src='{{plantPopupImg}}'></image>
-        <view class='helpPopupRule'>成长值规则>></view>
+        <view class='helpPopupRule'>帮助</view>
       </view>
       <view class='rules'></view>
+      <view class='know' bindtap='close'>我知道了</view>
     </view>
   </view>
-</block>

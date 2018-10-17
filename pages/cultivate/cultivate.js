@@ -95,7 +95,8 @@ Page({
     //更新签到信息
     punchClock() {
         var that = this;
-        // that.watering(1);        
+        // that.watering(1);   
+		console.log('???????????',app.globalData.userInfo.openId)     
         wx.request({
             url: app.globalData.appUrl + 'saveClock',
             method: "POST",
@@ -120,12 +121,12 @@ Page({
 
     //获取用户签到信息
     saveClock() {
-        var that = this;
+        var that = this;   
         wx.request({
             url: app.globalData.appUrl + 'saveClock',
             method: "GET",
             data: {
-                user_id: app.globalData.userInfo.openId
+                user_id: wx.getStorageSync('openId'),
             },
             success(res) {
                 if (res.data.code == 0) {
@@ -170,16 +171,59 @@ Page({
     },
 
     //跳转至提现页
-    goWithDraw() {
+    goWithDraw(e) {
+		if(e && e.detail.formId){
+			console.log(e.detail.formId);
+			wx.request({
+				url: `${app.globalData.appUrl}addForm`,
+				method:"POST",
+				data:{
+					user_id:wx.getStorageSync("userId"),
+					form_id: e.detail.formId,
+				},
+				success:function(res){
+					console.log('???????????????',res)
+				}
+			})
+		}
 		this.plantLevel();
-		
         wx.navigateTo({
             url: '/pages/personalCenter/putforward/putforward',
         })
     },
 
+	getFormID:function(e){
+		if (e && e.detail.formId) {
+			console.log(e.detail.formId);
+			wx.request({
+				url: `${app.globalData.appUrl}addForm`,
+				method: "POST",
+				data: {
+					user_id: wx.getStorageSync("userId"),
+					form_id: e.detail.formId,
+				},
+				success: function (res) {
+					console.log('???????????????', res)
+				}
+			})
+		}
+	},
+
     //关闭弹窗
-    close() {
+    close(e) {
+		if (e && e.detail.formId) {
+			console.log(e.detail.formId);
+			wx.request({
+				url: `${app.globalData.appUrl}addForm`,
+				method: "POST",
+				data: {
+					user_id: wx.getStorageSync("userId"),
+					form_id: e.detail.formId,
+				},
+				success: function (res) {
+				}
+			})
+		}
         this.setData({
             showPopup: 0,
         })
@@ -317,6 +361,7 @@ Page({
         return {
             title: '老铁，快来帮我浇水助力吧~',
             path: `/pages/index/index`,
+			imageUrl:"https://tp.datikeji.com/a/15396914967804/QM7fjWnXUHIqwaoTFLVzQtoPOclxIUg3QNxPmV4e.png",
             success: function(res) {}
         }
     },

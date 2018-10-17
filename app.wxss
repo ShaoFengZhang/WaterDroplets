@@ -31,4 +31,8 @@ page {
 	left: 0;
 	bottom: 10px;
 } */
+
+button::after {
+    border: none;
+}
 @import "/template/template.wxss";

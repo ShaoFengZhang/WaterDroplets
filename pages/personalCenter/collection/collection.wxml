@@ -16,15 +16,11 @@
             </view>
             <view class='event' data-id="{{item.content_id}}" data-year="{{item.year}}" bindtap='goEventDes'>
                 <view class='eventDes'>{{item.content}}</view>
-                <!-- <view class="del" catchtap="del" data-index="{{index}}">删除</view> -->
             </view>
         </view>
-        <view class='default' wx:if="{{collectedList.length == 0}}">
-            <view class='goCollection' bindtap='goCollection'></view>
-        </view>
-    </block>
 
-    <view class='noCollection' wx:if="{{!collectedList.length}}">
-        <image src='/images/noCollection.png' />
+    </block>
+    <view class='default' wx:if="{{!collectedList.length}}">
+        <view class='goCollection' bindtap='goCollection'></view>
     </view>
 </view>

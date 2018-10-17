@@ -1,53 +1,53 @@
 <!--pages/personalCenter/putforward/putforward.wxml-->
 <view class='headBox' style='height:{{height}}px;'>
-  <image class='back' src='/images/back.png' bindtap='backPage'></image>
-  <view class='title'>红包提现</view>
+    <image class='back' src='/images/back.png' bindtap='backPage'></image>
+    <view class='title'>红包提现</view>
 </view>
 <view class='mainBox'>
-  <view class='avatarBox'>
-    <image class='avatarUrl' src='{{avatarUrl}}'></image>
-  </view>
-  <view class='changeText'>零钱:
-    <text class='change'>{{user_money}}</text>元
-  </view>
-  <view class='putBtn' bindtap='withDrow'></view>
-  <view class='recordBox'>
-    <view class='btnBox'>
-      <view class='btnRecord {{category == 1 ? "active" : ""}}' bindtap='showIncome'>收入记录</view>
-      <view class='btnRecord {{category == 2 ? "active" : ""}}' bindtap='showWithdrow'>提现记录</view>
+    <view class='avatarBox'>
+        <image class='avatarUrl' src='{{avatarUrl}}'></image>
     </view>
-    <scroll-view class='recordList' scroll-y>
-      <block wx:for="{{recordList}}" wx:key="index" wx:if="{{category == 1}}">
-        <view class='default' wx:if="{{recordList.length == 0}}"></view>
-        <view class='item' wx:if="{{recordList.length > 0}}">
-          <view class='itemTitle' wx:if="{{item.type == 0}}">每日打卡</view>
-          <view class='itemTitle' wx:if="{{item.type == 1}}">植物升级</view>
-          <view class='itemMoney'>+{{item.money}}</view>
-          <view class='itemDes' wx:if="{{item.type == 0}}">早起打卡成功获得红包奖励</view>
-          <view class='itemDes' wx:if="{{item.type == 1}}">植物从LV5升级到LV6</view>
-          <view class='itemTime'>{{item.created_at}}</view>
+    <view class='changeText'>零钱:
+        <text class='change'>{{user_money}}</text>元
+    </view>
+    <view class='putBtn' bindtap='withDrow'></view>
+    <view class='recordBox'>
+        <view class='btnBox'>
+            <view class='btnRecord {{category == 1 ? "active" : ""}}' bindtap='showIncome'>收入记录</view>
+            <view class='btnRecord {{category == 2 ? "active" : ""}}' bindtap='showWithdrow'>提现记录</view>
         </view>
-      </block>
-      <block wx:for="{{recordList}}" wx:key="index" wx:if="{{category == 2}}">
-        <view class='default' wx:if="{{recordList.length == 0}}"></view>
-        <view class='item' wx:if="{{recordList.length > 0}}">
-          <view class='itemTitle' wx:if="{{item.type == 0}}">每日打卡</view>
-          <view class='itemTitle' wx:if="{{item.type == 1}}">植物升级</view>
-          <view class='itemMoney'>-{{item.money}}</view>
-          <view class='itemDes' wx:if="{{item.type == 0}}">早起打卡成功获得红包奖励</view>
-          <view class='itemDes' wx:if="{{item.type == 1}}">植物升级</view>
-          <view class='itemTime'>{{item.created_at}}</view>
-        </view>
-      </block>
-    </scroll-view>
-  </view>
-  <view class='rule' bindtap='showPopup'>提现规则>></view>
+        <scroll-view class='recordList' scroll-y>
+            <view class='default' wx:if="{{recordList.length == 0}}"></view>
+            <block wx:for="{{recordList}}" wx:key="index" wx:if="{{category == 1}}">
+                <view class='item' wx:if="{{recordList.length > 0}}">
+                    <view class='itemTitle' wx:if="{{item.type == 0}}">每日打卡</view>
+                    <view class='itemTitle' wx:if="{{item.type == 1}}">植物升级</view>
+                    <view class='itemMoney'>+{{item.money}}</view>
+                    <view class='itemDes' wx:if="{{item.type == 0}}">早起打卡成功获得红包奖励</view>
+                    <view class='itemDes' wx:if="{{item.type == 1}}">植物从LV5升级到LV6</view>
+                    <view class='itemTime'>{{item.created_at}}</view>
+                </view>
+            </block>
+            <view class='default' wx:if="{{recordList.length == 0}}"></view>
+            <block wx:for="{{recordList}}" wx:key="index" wx:if="{{category == 2}}">
+                <view class='item' wx:if="{{recordList.length > 0}}">
+                    <view class='itemTitle' wx:if="{{item.type == 0}}">每日打卡</view>
+                    <view class='itemTitle' wx:if="{{item.type == 1}}">植物升级</view>
+                    <view class='itemMoney'>-{{item.money}}</view>
+                    <view class='itemDes' wx:if="{{item.type == 0}}">早起打卡成功获得红包奖励</view>
+                    <view class='itemDes' wx:if="{{item.type == 1}}">植物升级</view>
+                    <view class='itemTime'>{{item.created_at}}</view>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+    <view class='rule' bindtap='showPopup'>提现规则>></view>
 </view>
 <!-- 弹窗 -->
 <view class='shadow' wx:if="{{showPopup == 1}}">
-  <view class='popup'>
-    <view class='helpPopupRule'>提现规则</view>
-    <view class='rules'></view>
-    <view class='know' bindtap='close'>我知道了</view>
-  </view>
+    <view class='popup'>
+        <view class='helpPopupRule'>提现规则</view>
+        <view class='rules'></view>
+        <view class='know' bindtap='close'>我知道了</view>
+    </view>
 </view>
