@@ -11,7 +11,7 @@
     <view class='savePic' bindtap='savePic'></view>
     <button class='share' open-type='share'></button>
   </view>
-  <view class='howShare' bindtap='gotoTopprotom' >怎么保存海报发送朋友圈?</view>
+  <view class='howShare' bindtap='gotoTopprotom' >怎么保存海报发送{{friendtxt}}?</view>
 </view>
 
 <view class='GroupRulerView' wx:if="{{isShowRulerView}}">

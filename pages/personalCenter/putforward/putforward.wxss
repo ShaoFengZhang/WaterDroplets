@@ -190,3 +190,13 @@
   color: #4C4C4C;
   font-size: 30rpx;
 }
+
+.withDrawRuler{
+	width:100%;
+	height:240rpx;
+	font-size: 24rpx;
+	line-height: 80rpx;
+	box-sizing: border-box;
+	padding: 0 40rpx;
+	color: #4c4c4c;
+}

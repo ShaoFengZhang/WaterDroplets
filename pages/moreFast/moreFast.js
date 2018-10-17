@@ -4,7 +4,8 @@ Page({
     data: {
         plantImg: "",
         qrcodeImg: "",
-		height: app.globalData.statusBarHeight + 44,
+        height: app.globalData.statusBarHeight + 44,
+        friendtxt: '',
     },
     //返回前一页
     backPage() {
@@ -73,7 +74,7 @@ Page({
                                             wx.hideLoading();
                                             wx.showModal({
                                                 title: '一切准备就绪',
-                                                content: '快发送到朋友圈叫好友助力吧！',
+												content: `快发送到${that.data.friendtxt}叫好友助力吧！`,
                                                 showCancel: false,
                                                 success: function(res) {
                                                     wx.previewImage({
@@ -88,7 +89,7 @@ Page({
                                 fail() {
                                     wx.showModal({
                                         title: '一切准备就绪',
-                                        content: '快发送到朋友圈叫好友助力吧！',
+										content: `快发送到${that.data.friendtxt}叫好友助力吧！`,
                                         showCancel: false,
                                         success: function(res) {
                                             wx.previewImage({
@@ -110,7 +111,7 @@ Page({
                                     wx.hideLoading();
                                     wx.showModal({
                                         title: '一切准备就绪',
-                                        content: '快发送到朋友圈叫好友助力吧！',
+										content: `快发送到${that.data.friendtxt}叫好友助力吧！`,
                                         showCancel: false,
                                         success: function(res) {
                                             wx.previewImage({
@@ -130,8 +131,21 @@ Page({
 
     onLoad: function(options) {
         var that = this;
-		that.openId = wx.getStorageSync("openId");		
-        console.log(options)
+        that.openId = wx.getStorageSync("openId");
+        console.log(options);
+        wx.request({
+            url: 'https://xcx14.datikeji.com/api/isExamine',
+            method: "GET",
+            data: {
+
+            },
+            success: function(res) {
+                console.log(res);
+				that.setData({
+					friendtxt: res.data.data.firend
+                })
+            }
+        })
         wx.showLoading({
             title: '生成中',
             mask: 'true'
@@ -146,18 +160,18 @@ Page({
         });
         that.setData({
             plantImg: options.plantImg,
-			grouth: options.grouth,
-			upgrade: options.upgrade
+            grouth: options.grouth,
+            upgrade: options.upgrade
         })
         that.darwBgImg();
-		var qrcodeImg = app.globalData.appUrl + `get_qrcode?page=pages/shareInto/shareInto&scene=${that.openId}`;
+        var qrcodeImg = app.globalData.appUrl + `get_qrcode?page=pages/shareInto/shareInto&scene=${that.openId}`;
         that.setData({
             qrcodeImg: qrcodeImg
         })
     },
 
     onShareAppMessage: function(e) {
-		console.log(`/pages/shareInto/shareInto?masterId=${wx.getStorageSync("openId")}&grouth=${this.data.grouth}&upgrade=${this.data.upgrade}&plantImg=${this.data.plantImg}&avatarUrl=${app.globalData.userInfo.avatarUrl}`)
+        console.log(`/pages/shareInto/shareInto?masterId=${wx.getStorageSync("openId")}&grouth=${this.data.grouth}&upgrade=${this.data.upgrade}&plantImg=${this.data.plantImg}&avatarUrl=${app.globalData.userInfo.avatarUrl}`)
         if (e && e.from == 'button') {
             var title = '有人@你 老铁就差你了，快来帮我浇水领红包🤝 '
         } else {
@@ -165,24 +179,24 @@ Page({
         }
         return {
             title: title,
-			path: `/pages/shareInto/shareInto?masterId=${this.openId}&grouth=${this.data.grouth}&upgrade=${this.data.upgrade}&plantImg=${this.data.plantImg}&avatarUrl=${app.globalData.userInfo.avatarUrl}`,
-			imageUrl:"https://tp.datikeji.com/a/15396913934422/Gj6Ul1gIsVn0VQ4Hf2mo25ZNFP8jtw4I0F6Nn0YR.png",
+            path: `/pages/shareInto/shareInto?masterId=${this.openId}&grouth=${this.data.grouth}&upgrade=${this.data.upgrade}&plantImg=${this.data.plantImg}&avatarUrl=${app.globalData.userInfo.avatarUrl}`,
+            imageUrl: "https://tp.datikeji.com/a/15396913934422/Gj6Ul1gIsVn0VQ4Hf2mo25ZNFP8jtw4I0F6Nn0YR.png",
             success: function(res) {}
         }
     },
-	gotoTopprotom:function(){
-		wx.navigateTo({
-			url: '/pages/topPrompt/topPrompt',
-		})
-	},
-	showGroupRuler:function(){
-		this.setData({
-			isShowRulerView:true,
-		})
-	},
-	closeRulerView:function(){
-		this.setData({
-			isShowRulerView: false,
-		})
-	},
+    gotoTopprotom: function() {
+        wx.navigateTo({
+            url: '/pages/topPrompt/topPrompt',
+        })
+    },
+    showGroupRuler: function() {
+        this.setData({
+            isShowRulerView: true,
+        })
+    },
+    closeRulerView: function() {
+        this.setData({
+            isShowRulerView: false,
+        })
+    },
 })

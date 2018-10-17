@@ -136,10 +136,26 @@ Page({
         })
     },
 
-    onLoad: function(options) {
-        this.setData({
-            avatarUrl: app.globalData.userInfo.avatarUrl
-        })
+    onLoad: function(options) { 
+		let _this=this;   
+		wx.request({
+			url: 'https://xcx14.datikeji.com/api/isExamine',
+			method: "GET",
+			data: {
+
+			},
+			success: function (res) {
+				console.log(res);
+				_this.setData({
+					oneData:res.data.data.one,
+					twoData:res.data.data.two,
+					threeData:res.data.data.three,
+				})
+			}
+		});
+		this.setData({
+			avatarUrl: app.globalData.userInfo.avatarUrl
+		});
     },
 
     onReady: function() {

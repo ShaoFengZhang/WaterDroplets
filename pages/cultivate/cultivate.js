@@ -4,6 +4,7 @@ const app = getApp();
 Page({
 
     data: {
+		ifshowGrow:false,
 		height: app.globalData.statusBarHeight + 44,
         plantImg: "https://tp.datikeji.com/constellation/15381264984469/4xIy5AXftNe7m7IUv8pfiA6jIjLVbCD7ENpBNJBQ.png",
         plantPopupImg: "https://tp.datikeji.com/constellation/15381901994499/3wKR5bvoWZyldZIIvE4Yym6age9NO7s9mMfnw5IU.png",
@@ -96,12 +97,12 @@ Page({
     punchClock() {
         var that = this;
         // that.watering(1);   
-		console.log('???????????',app.globalData.userInfo.openId)     
+		console.log('???????????', wx.getStorageSync('openId'))     
         wx.request({
             url: app.globalData.appUrl + 'saveClock',
             method: "POST",
             data: {
-                user_id: app.globalData.userInfo.openId
+				user_id: wx.getStorageSync('openId'),
                 // open_id: app.globalData.userInfo.openId
             },
             success(res) {
@@ -169,7 +170,7 @@ Page({
             }
         })
     },
-
+ 
     //跳转至提现页
     goWithDraw(e) {
 		if(e && e.detail.formId){
@@ -299,7 +300,7 @@ Page({
         wx.request({
             url: app.globalData.appUrl + 'watering',
             data: {
-                user_id: app.globalData.userInfo.openId,
+				user_id: wx.getStorageSync('openId'),
                 status: status,
                 grouth: that.data.grouth,
                 all_grouth: all_grouth
@@ -336,6 +337,20 @@ Page({
     },
 
     onLoad: function(options) {
+		let _this=this;
+		wx.request({
+			url: 'https://xcx14.datikeji.com/api/isExamine',
+			method:"GET",
+			data:{
+
+			},
+			success:function(res){
+				console.log(res);
+				_this.setData({
+					ifshowGrow: !res.data.data.examine
+				})
+			}
+		})
         var weekArr = ["日", "一", "二", "三", "四", "五", "六"];
         var index = new Date().getDay();
         var weekStamp = "星期" + weekArr[index];

@@ -47,7 +47,12 @@
 <view class='shadow' wx:if="{{showPopup == 1}}">
     <view class='popup'>
         <view class='helpPopupRule'>提现规则</view>
-        <view class='rules'></view>
+        <!-- <view class='rules'></view> -->
+		<view class='withDrawRuler'>
+			<view>1. 首次提现最低金额为￥{{oneData || 0.3}}</view>
+			<view>2. 后续提现金额为￥{{twoData || 0.8}}</view>
+			<view>3. 提现金额上限为￥{{threeData || 1}}</view>
+		</view>
         <view class='know' bindtap='close'>我知道了</view>
     </view>
 </view>

@@ -58,7 +58,7 @@
         </view>
     </view>
 </view>
-<view class='growFaster' bindtap='goMoreFast'></view>
+<view class='growFaster' bindtap='goMoreFast' wx:if="{{ifshowGrow}}"></view>
 <!-- 遮罩层 -->
 <block>
     <view class='shadow' wx:if="{{showPopup == 1}}">

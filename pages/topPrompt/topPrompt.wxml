@@ -1,6 +1,6 @@
 <view class='headBox' style='height:{{height}}px'>
     <image class='back' src='/images/back.png' bindtap='backPage'></image>
-    <view class='title'>怎么保存海报发送朋友圈？</view>
+    <view class='title'>怎么保存海报发送{{friendtxt}}？</view>
 </view>
 
 <scroll-view scroll-y class='mainBox' style='height:{{scrollHeight-15}}px;'>
